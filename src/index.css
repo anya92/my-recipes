@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Pragati Narrow';
+  font-weight: 400;
+  src: local('Pragati Narrow'), url(./assets/fonts/PragatiNarrow-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Pragati Narrow';
+  font-weight: 700;
+  src: local('Pragati Narrow'), url(./assets/fonts/PragatiNarrow-Bold.ttf) format('truetype');
+}
+
