@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should not render next if index > length of all recipes - 3 1`] = `
+<styled.div>
+  <div
+    id="previous"
+    onClick={[Function]}
+  >
+    previous
+  </div>
+  <Link
+    replace={false}
+    to="/recipes"
+  >
+    view all recipes
+  </Link>
+  <div />
+</styled.div>
+`;
+
+exports[`should not render previous if index = 0 1`] = `
+<styled.div>
+  <div />
+  <Link
+    replace={false}
+    to="/recipes"
+  >
+    view all recipes
+  </Link>
+  <div
+    id="next"
+    onClick={[Function]}
+  >
+    next
+  </div>
+</styled.div>
+`;
+
+exports[`should render previous and next if index > 0 1`] = `
+<styled.div>
+  <div
+    id="previous"
+    onClick={[Function]}
+  >
+    previous
+  </div>
+  <Link
+    replace={false}
+    to="/recipes"
+  >
+    view all recipes
+  </Link>
+  <div
+    id="next"
+    onClick={[Function]}
+  >
+    next
+  </div>
+</styled.div>
+`;

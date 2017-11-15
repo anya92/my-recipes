@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Home correctly 1`] = `
+<div>
+  <Title />
+  <Links />
+  <Gallery
+    recipes={
+      Array [
+        Object {
+          "addedAt": 1510566683200,
+          "category": "breakfast",
+          "directions": "Heat butter in nonstick skillet. Break eggs and slip into pan, one at a time. Cook slowly until whites are completely set and yolks begin to thicken but are not hard, 5 to 6 minutes. Slide turner under each egg and carefully flip it over in pan. Cook second side to desired doneness. Sprinkle with salt and pepper. Serve immediately.",
+          "image": "assets/images/fried-eggs.jpg",
+          "ingredients": Array [
+            Object {
+              "name": "eggs",
+              "quantity": "2-4",
+            },
+            Object {
+              "name": "butter",
+            },
+            Object {
+              "name": "salt",
+            },
+            Object {
+              "name": "pepper",
+            },
+          ],
+          "name": "Fried Eggs",
+          "slug": "fried-eggs",
+          "tags": Array [
+            "quick&easy",
+            "healthy",
+          ],
+          "time": "9 minutes",
+          "yields": "2 to 4 servings",
+        },
+        Object {
+          "addedAt": 1510393883200,
+          "category": "breakfast",
+          "directions": "Whisk eggs, milk and vanilla together in a jug. Sift flour into a large bowl. Stir in sugar. Make a well in the centre. Add milk mixture. Whisk until just combined. Heat a large non-stick frying pan over medium heat. Grease pan with butter. cook 2 pancakes for 2 minutes or until bubbles appear on surface. Turn and cook for a further 1-2 minutes or until cooked through.",
+          "image": "assets/images/pancakes.jpg",
+          "ingredients": Array [
+            Object {
+              "name": "eggs",
+              "quantity": "2",
+            },
+            Object {
+              "name": "milk",
+              "quantity": "1 3/4 cup",
+            },
+            Object {
+              "name": "vanilla essence",
+              "quantity": "1 teaspoon",
+            },
+            Object {
+              "name": "flour",
+              "quantity": "2 cups",
+            },
+            Object {
+              "name": "butter",
+            },
+          ],
+          "name": "Pancakes",
+          "slug": "pancakes",
+          "tags": Array [
+            "quick&easy",
+          ],
+          "time": "35 minutes",
+          "yields": "16 pancakes",
+        },
+        Object {
+          "addedAt": 1510134683200,
+          "category": "breakfast",
+          "directions": "Prepare the oats according to the package directions. Top with the fruits and sunflower seeds.",
+          "image": "assets/images/oatmeal.jpg",
+          "ingredients": Array [
+            Object {
+              "name": "quick-cooking oats",
+              "quantity": "1 serving",
+            },
+            Object {
+              "name": "fruits",
+              "quantity": "1/2 cup",
+            },
+            Object {
+              "name": "sunflower seeds",
+              "quantity": "1 tablespoon",
+            },
+          ],
+          "name": "Oatmeal",
+          "slug": "oatmeal",
+          "tags": Array [
+            "quick&easy",
+            "healthy",
+            "vegan",
+          ],
+          "time": "10 minutes",
+          "yields": "1 serve",
+        },
+      ]
+    }
+  />
+  <Nav
+    handleNext={[Function]}
+    handlePrevious={[Function]}
+    index={0}
+    recipesLength={25}
+  />
+  <AddNewLink />
+</div>
+`;

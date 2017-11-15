@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Gallery correctly 1`] = `
+<styled.div>
+  <styled.div
+    key="fried-eggs"
+  >
+    <Link
+      replace={false}
+      to="/recipes/fried-eggs"
+    >
+      <img
+        alt="Fried Eggs"
+        src="assets/images/fried-eggs.jpg"
+      />
+    </Link>
+  </styled.div>
+  <styled.div
+    key="pancakes"
+  >
+    <Link
+      replace={false}
+      to="/recipes/pancakes"
+    >
+      <img
+        alt="Pancakes"
+        src="assets/images/pancakes.jpg"
+      />
+    </Link>
+  </styled.div>
+  <styled.div
+    key="oatmeal"
+  >
+    <Link
+      replace={false}
+      to="/recipes/oatmeal"
+    >
+      <img
+        alt="Oatmeal"
+        src="assets/images/oatmeal.jpg"
+      />
+    </Link>
+  </styled.div>
+</styled.div>
+`;

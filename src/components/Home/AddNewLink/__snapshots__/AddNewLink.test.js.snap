@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render AddNewLink correctly 1`] = `
+<styled.div>
+  <Link
+    replace={false}
+    to="add"
+  >
+    Add New
+  </Link>
+</styled.div>
+`;

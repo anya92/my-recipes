@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Links should render Links correctly 1`] = `
+<styled.div>
+  <Link
+    replace={false}
+    to="/breakfast"
+  >
+    Breakfast
+  </Link>
+  <Link
+    replace={false}
+    to="/dinner"
+  >
+    Dinner
+  </Link>
+  <Link
+    replace={false}
+    to="/desserts"
+  >
+    Desserts
+  </Link>
+  <Link
+    replace={false}
+    to="/snacks"
+  >
+    Snacks
+  </Link>
+  <Link
+    replace={false}
+    to="/drinks"
+  >
+    Drinks
+  </Link>
+</styled.div>
+`;
