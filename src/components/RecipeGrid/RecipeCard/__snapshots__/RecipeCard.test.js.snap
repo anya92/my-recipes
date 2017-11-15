@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render RecipeCard correctly 1`] = `
+<styled.div
+  key="fried-eggs"
+>
+  <Link
+    replace={false}
+    to="/recipes/fried-eggs"
+  >
+    <styled.div>
+      <img
+        alt="Fried Eggs"
+        src="assets/images/fried-eggs.jpg"
+      />
+    </styled.div>
+  </Link>
+  <styled.div>
+    <Link
+      replace={false}
+      to="/recipes/fried-eggs"
+    >
+      <h3>
+        Fried Eggs
+      </h3>
+      <p>
+        Added 
+        4 hours ago
+      </p>
+    </Link>
+  </styled.div>
+</styled.div>
+`;

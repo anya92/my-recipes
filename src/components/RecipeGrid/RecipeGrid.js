@@ -21,7 +21,7 @@ const CardsGrid = styled.div`
   }
 `;
 
-const RecipeGrid = ({ recipes }) => {
+export const RecipeGrid = ({ recipes }) => {
   const recipesCards = recipes.map(recipe => <RecipeCard key={recipe.slug} recipe={recipe} />);
   return (
     <div>

@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Navbar correctly 1`] = `
+<styled.nav>
+  <styled.h1>
+    <Link
+      replace={false}
+      to="/"
+    >
+      <span>
+        my
+      </span>
+      Recipes
+    </Link>
+  </styled.h1>
+  <styled.div
+    onClick={[Function]}
+  >
+    <span />
+  </styled.div>
+  <styled.div
+    className="toggle"
+  >
+    <NavLink
+      activeClassName="active"
+      ariaCurrent="true"
+      to="/recipes"
+    >
+      All recipes
+    </NavLink>
+    <NavLink
+      activeClassName="active"
+      ariaCurrent="true"
+      to="/breakfast"
+    >
+      Breakfast
+    </NavLink>
+    <NavLink
+      activeClassName="active"
+      ariaCurrent="true"
+      to="/dinner"
+    >
+      Dinner
+    </NavLink>
+    <NavLink
+      activeClassName="active"
+      ariaCurrent="true"
+      to="/desserts"
+    >
+      Desserts
+    </NavLink>
+    <NavLink
+      activeClassName="active"
+      ariaCurrent="true"
+      to="/snacks"
+    >
+      Snacks
+    </NavLink>
+    <NavLink
+      activeClassName="active"
+      ariaCurrent="true"
+      to="/drinks"
+    >
+      Drinks
+    </NavLink>
+  </styled.div>
+  <styled.div
+    className="toggle"
+  >
+    <NavLink
+      activeClassName="active"
+      ariaCurrent="true"
+      to="/add"
+    >
+      Add New
+    </NavLink>
+  </styled.div>
+</styled.nav>
+`;
