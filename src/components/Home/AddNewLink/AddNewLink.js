@@ -4,16 +4,12 @@ import { Link } from 'react-router-dom';
 
 const StyledButton = styled.div`
   text-align: center;
-  margin: 20px 0;
-  padding: 10px;
+  margin: 15px 0;
   a {
     font-weight: 700;
     font-size: 1.35rem;
     text-decoration: none;
     color: #333;
-    // background-color: dodgerblue;
-    // padding: 5px 20px;
-    // border-radius: 5px;
   }
 `;
 
