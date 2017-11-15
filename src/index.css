@@ -10,3 +10,10 @@
   src: local('Pragati Narrow'), url(./assets/fonts/PragatiNarrow-Bold.ttf) format('truetype');
 }
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100%;
+}

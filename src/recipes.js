@@ -1,5 +1,5 @@
 function getDate(daysAgo = 0) {
-  return 1510566683200 - (daysAgo * 24 * 60 * 60 * 1000);
+  return 1510753425607 - (daysAgo * 24 * 60 * 60 * 1000);
 }
 
 module.exports = [

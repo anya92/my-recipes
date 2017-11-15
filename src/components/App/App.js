@@ -13,8 +13,6 @@ const Container = styled.div`
   font-family: 'Pragati Narrow';
   color: #333;
   font-size: 17px;
-  max-width: 100%;
-  max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
 `;

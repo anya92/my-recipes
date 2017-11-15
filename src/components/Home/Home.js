@@ -57,8 +57,9 @@ export class Home extends Component {
 }
 
 function mapStateToProps(state) {
+  const recipes = state.sort((a, b) => b.addedAt - a.addedAt);
   return {
-    recipes: state,
+    recipes,
   };
 }
 
