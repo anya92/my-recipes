@@ -25,7 +25,7 @@ exports[`should render RecipeCard correctly 1`] = `
       </h3>
       <p>
         Added 
-        4 hours ago
+        21 hours ago
       </p>
     </Link>
   </styled.div>

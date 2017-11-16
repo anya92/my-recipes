@@ -4,53 +4,6 @@ import moment from 'moment';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const StyledCard = styled.div`
-  overflow: hidden;
-  text-decoration: none;
-  @media all and (min-width: 800px) {
-    &:nth-child(10n + 1), &:nth-child(10n + 7) {
-      display: flex;
-      a div {
-        height: 100%;
-        max-height: 300px;
-      }
-      div { 
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding-right: 10px;
-        order: -1;
-        flex-basis: 50%;
-        h3 {
-          font-size: 1.7rem;
-        }
-        p {
-          font-size: 1.3rem;
-        }
-      }
-    }
-    &:nth-child(10n + 1) {
-      grid-column: 1 / 3;
-    }  
-    &:nth-child(10n + 7) {
-      grid-column: 2 / 4;
-      div {
-        order: 0;
-        padding-left: 5px;
-      }
-    }
-  }  
-`;
-
-const Image = styled.div`
-  height: 200px;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-`;
-
 const RecipeName = styled.div`
   a {
     color: #333;
@@ -68,6 +21,55 @@ const RecipeName = styled.div`
   }  
 `;
 
+const Image = styled.div`
+  height: 200px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+`;
+
+const StyledCard = styled.div`
+  overflow: hidden;
+  text-decoration: none;
+  @media all and (min-width: 800px) {
+    &:nth-child(10n + 1), &:nth-child(10n + 7) {
+      display: flex;
+      ${Image} {
+        height: 100%;
+        max-height: 300px;
+      }
+      ${RecipeName} { 
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        flex-basis: 50%;
+        h3 {
+          font-size: 1.7rem;
+        }
+        p {
+          font-size: 1.3rem;
+        }
+      }
+    }
+    &:nth-child(10n + 1) {
+      grid-column: 1 / 3;
+      ${RecipeName} {
+        padding-right: 10px;
+        order: -1;
+      }
+    }  
+    &:nth-child(10n + 7) {
+      grid-column: 2 / 4;
+      ${RecipeName} {
+        order: 0;
+        padding-left: 5px;
+      }
+    }
+  }  
+`;
+
 const RecipeCard = ({ recipe }) => (
   <StyledCard key={recipe.slug}>
     <Link to={`/recipes/${recipe.slug}`}>
@@ -78,7 +80,7 @@ const RecipeCard = ({ recipe }) => (
     <RecipeName>
       <Link to={`/recipes/${recipe.slug}`}>
         <h3>{recipe.name}</h3>
-        <p>Added {moment(recipe.addedAt).fromNow()}</p>
+        <p>Added {moment(recipe.addedAt).from(moment())}</p>
       </Link>
     </RecipeName>
   </StyledCard>

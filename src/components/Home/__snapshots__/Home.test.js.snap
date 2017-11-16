@@ -8,7 +8,7 @@ exports[`should render Home correctly 1`] = `
     recipes={
       Array [
         Object {
-          "addedAt": 1510566683200,
+          "addedAt": 1510753425607,
           "category": "breakfast",
           "directions": "Heat butter in nonstick skillet. Break eggs and slip into pan, one at a time. Cook slowly until whites are completely set and yolks begin to thicken but are not hard, 5 to 6 minutes. Slide turner under each egg and carefully flip it over in pan. Cook second side to desired doneness. Sprinkle with salt and pepper. Serve immediately.",
           "image": "assets/images/fried-eggs.jpg",
@@ -37,7 +37,7 @@ exports[`should render Home correctly 1`] = `
           "yields": "2 to 4 servings",
         },
         Object {
-          "addedAt": 1510393883200,
+          "addedAt": 1510580625607,
           "category": "breakfast",
           "directions": "Whisk eggs, milk and vanilla together in a jug. Sift flour into a large bowl. Stir in sugar. Make a well in the centre. Add milk mixture. Whisk until just combined. Heat a large non-stick frying pan over medium heat. Grease pan with butter. cook 2 pancakes for 2 minutes or until bubbles appear on surface. Turn and cook for a further 1-2 minutes or until cooked through.",
           "image": "assets/images/pancakes.jpg",
@@ -71,7 +71,7 @@ exports[`should render Home correctly 1`] = `
           "yields": "16 pancakes",
         },
         Object {
-          "addedAt": 1510134683200,
+          "addedAt": 1510321425607,
           "category": "breakfast",
           "directions": "Prepare the oats according to the package directions. Top with the fruits and sunflower seeds.",
           "image": "assets/images/oatmeal.jpg",

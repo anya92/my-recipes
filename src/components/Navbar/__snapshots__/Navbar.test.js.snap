@@ -24,6 +24,7 @@ exports[`should render Navbar correctly 1`] = `
     <NavLink
       activeClassName="active"
       ariaCurrent="true"
+      onClick={[Function]}
       to="/recipes"
     >
       All recipes
@@ -31,6 +32,7 @@ exports[`should render Navbar correctly 1`] = `
     <NavLink
       activeClassName="active"
       ariaCurrent="true"
+      onClick={[Function]}
       to="/breakfast"
     >
       Breakfast
@@ -38,6 +40,7 @@ exports[`should render Navbar correctly 1`] = `
     <NavLink
       activeClassName="active"
       ariaCurrent="true"
+      onClick={[Function]}
       to="/dinner"
     >
       Dinner
@@ -45,6 +48,7 @@ exports[`should render Navbar correctly 1`] = `
     <NavLink
       activeClassName="active"
       ariaCurrent="true"
+      onClick={[Function]}
       to="/desserts"
     >
       Desserts
@@ -52,6 +56,7 @@ exports[`should render Navbar correctly 1`] = `
     <NavLink
       activeClassName="active"
       ariaCurrent="true"
+      onClick={[Function]}
       to="/snacks"
     >
       Snacks
@@ -59,6 +64,7 @@ exports[`should render Navbar correctly 1`] = `
     <NavLink
       activeClassName="active"
       ariaCurrent="true"
+      onClick={[Function]}
       to="/drinks"
     >
       Drinks

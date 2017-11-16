@@ -7,7 +7,7 @@ import {
 import styled from 'styled-components';
 
 import Home from '../Home/Home';
-import RecipeGrid from '../RecipesGrid/RecipesGrid';
+import RecipeGrid from '../RecipeGrid/RecipeGrid';
 
 const Container = styled.div`
   font-family: 'Pragati Narrow';

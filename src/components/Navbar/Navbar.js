@@ -44,7 +44,7 @@ const Links = styled.div`
       margin: 5px 15px;
     }
   }
-  @media screen and (max-width: 976px) {
+  @media screen and (max-width: 800px) {
     display: none;
     &.open {
       display: flex;
@@ -59,6 +59,8 @@ const AddNewLink = styled.div`
   @media screen and (max-width: 976px) {
     margin-top: 15px;
     margin-bottom: 20px;
+  }
+  @media screen and (max-width: 800px) {
     display: none;
     &.open {
       display: block;
@@ -68,12 +70,12 @@ const AddNewLink = styled.div`
 
 const Toggle = styled.div`
   width: 30px;
-  height: 25px;
+  height: 20px;
   position: absolute;
-  top: 25px;
-  right: 20px;
+  top: 28px;
+  left: 20px;
   cursor: pointer;
-  @media screen and (min-width: 976px) {
+  @media screen and (min-width: 800px) {
     display: none;
   }
   &::after, &::before, span {
@@ -82,6 +84,7 @@ const Toggle = styled.div`
     height: 3px;
     background-color: #333;
     position: absolute;
+    border-radius: 10px;
   }
   &::after {
     top: 0;
@@ -91,28 +94,32 @@ const Toggle = styled.div`
   }
   span {
     top: 50%;
+    width: 70%;
     transform: translateY(-50%);
   }
 `;
 
-const Navbar = () => (
-  <StyledNavbar>
-    <Brand>
-      <Link to="/"><span>my</span>Recipes</Link>
-    </Brand>
-    <Toggle onClick={() => { document.querySelectorAll('.toggle').forEach(el => el.classList.toggle('open')); }}><span /></Toggle>
-    <Links className="toggle">
-      <NavLink activeClassName="active" to="/recipes">All&nbsp;recipes</NavLink>
-      <NavLink activeClassName="active" to="/breakfast">Breakfast</NavLink>
-      <NavLink activeClassName="active" to="/dinner">Dinner</NavLink>
-      <NavLink activeClassName="active" to="/desserts">Desserts</NavLink>
-      <NavLink activeClassName="active" to="/snacks">Snacks</NavLink>
-      <NavLink activeClassName="active" to="/drinks">Drinks</NavLink>
-    </Links>
-    <AddNewLink className="toggle">
-      <NavLink to="/add">Add&nbsp;New</NavLink>
-    </AddNewLink>
-  </StyledNavbar>
-);
-
+const Navbar = () => {
+  const handleMenuClick = () => document.querySelectorAll('.toggle').forEach(el => el.classList.toggle('open'));
+  const handleLinkClick = () => document.querySelectorAll('.toggle').forEach(el => el.classList.remove('open'));
+  return (
+    <StyledNavbar>
+      <Brand>
+        <Link to="/"><span>my</span>Recipes</Link>
+      </Brand>
+      <Toggle onClick={handleMenuClick}><span /></Toggle>
+      <Links className="toggle">
+        <NavLink onClick={handleLinkClick} activeClassName="active" to="/recipes">All&nbsp;recipes</NavLink>
+        <NavLink onClick={handleLinkClick} activeClassName="active" to="/breakfast">Breakfast</NavLink>
+        <NavLink onClick={handleLinkClick} activeClassName="active" to="/dinner">Dinner</NavLink>
+        <NavLink onClick={handleLinkClick} activeClassName="active" to="/desserts">Desserts</NavLink>
+        <NavLink onClick={handleLinkClick} activeClassName="active" to="/snacks">Snacks</NavLink>
+        <NavLink onClick={handleLinkClick} activeClassName="active" to="/drinks">Drinks</NavLink>
+      </Links>
+      <AddNewLink className="toggle">
+        <NavLink to="/add">Add&nbsp;New</NavLink>
+      </AddNewLink>
+    </StyledNavbar>
+  );
+}
 export default Navbar;
