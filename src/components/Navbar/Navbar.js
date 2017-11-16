@@ -109,17 +109,30 @@ const Navbar = () => {
       </Brand>
       <Toggle onClick={handleMenuClick}><span /></Toggle>
       <Links className="toggle">
-        <NavLink onClick={handleLinkClick} activeClassName="active" to="/recipes">All&nbsp;recipes</NavLink>
-        <NavLink onClick={handleLinkClick} activeClassName="active" to="/breakfast">Breakfast</NavLink>
-        <NavLink onClick={handleLinkClick} activeClassName="active" to="/dinner">Dinner</NavLink>
-        <NavLink onClick={handleLinkClick} activeClassName="active" to="/desserts">Desserts</NavLink>
-        <NavLink onClick={handleLinkClick} activeClassName="active" to="/snacks">Snacks</NavLink>
-        <NavLink onClick={handleLinkClick} activeClassName="active" to="/drinks">Drinks</NavLink>
+        <NavLink onClick={handleLinkClick} activeClassName="active" exact to="/recipes">
+          All&nbsp;recipes
+        </NavLink>
+        <NavLink onClick={handleLinkClick} activeClassName="active" to="/breakfast">
+          Breakfast
+        </NavLink>
+        <NavLink onClick={handleLinkClick} activeClassName="active" to="/dinner">
+          Dinner
+        </NavLink>
+        <NavLink onClick={handleLinkClick} activeClassName="active" to="/desserts">
+          Desserts
+        </NavLink>
+        <NavLink onClick={handleLinkClick} activeClassName="active" to="/snacks">
+          Snacks
+        </NavLink>
+        <NavLink onClick={handleLinkClick} activeClassName="active" to="/drinks">
+          Drinks
+        </NavLink>
       </Links>
       <AddNewLink className="toggle">
         <NavLink to="/add">Add&nbsp;New</NavLink>
       </AddNewLink>
     </StyledNavbar>
   );
-}
+};
+
 export default Navbar;

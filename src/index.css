@@ -17,3 +17,16 @@
 body {
   max-width: 100%;
 }
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 15px 0 15px;
+  
+}
+
+@media all and (min-width: 800px) and (max-width: 976px) {
+  .container {
+    padding-top: 180px;
+  }
+}

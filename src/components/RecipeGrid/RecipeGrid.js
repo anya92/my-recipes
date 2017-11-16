@@ -10,12 +10,6 @@ const CardsGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 25px;
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 60px 15px 0 15px;
-  @media all and (min-width: 800px) and (max-width: 976px) {
-    padding-top: 160px;
-  }
   @media all and (max-width: 800px) {
     grid-template-columns: 1fr 1fr;
   }
@@ -29,9 +23,11 @@ export const RecipeGrid = ({ recipes }) => {
   return (
     <div>
       <Navbar />
-      <CardsGrid>
-        { recipesCards }
-      </CardsGrid>
+      <div className="container">
+        <CardsGrid>
+          { recipesCards }
+        </CardsGrid>
+      </div>
     </div>
   );
 };

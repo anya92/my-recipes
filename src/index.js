@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import registerServiceWorker from './registerServiceWorker';
 
 import '../node_modules/normalize.css/normalize.css';
+import '../node_modules/font-awesome/css/font-awesome.min.css';
 import './index.css';
 
 import recipes from './recipes';

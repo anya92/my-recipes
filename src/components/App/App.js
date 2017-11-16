@@ -8,6 +8,7 @@ import styled from 'styled-components';
 
 import Home from '../Home/Home';
 import RecipeGrid from '../RecipeGrid/RecipeGrid';
+import SingleRecipe from '../SingleRecipe/SingleRecipe';
 
 const Container = styled.div`
   font-family: 'Pragati Narrow';
@@ -19,7 +20,7 @@ const Container = styled.div`
 
 const App = () => (
   <Container>
-    <Router>
+    <Router onUpdate={() => window.scrollTo(0, 0)}>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/breakfast" render={props => <RecipeGrid {...props} category="breakfast" />} />
@@ -28,6 +29,7 @@ const App = () => (
         <Route path="/snacks" render={props => <RecipeGrid {...props} category="snacks" />} />
         <Route path="/drinks" render={props => <RecipeGrid {...props} category="drinks" />} />
         <Route exact path="/recipes" render={props => <RecipeGrid {...props} category="all" />} />
+        <Route path="/recipes/:slug" component={SingleRecipe} />
         <Route render={() => <h1>404 Not Found</h1>} />
       </Switch>
     </Router>
