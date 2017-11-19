@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render RecipeImage correctly 1`] = `
+<styled.div>
+  <img
+    alt="Fried Eggs"
+    src="assets/images/fried-eggs.jpg"
+  />
+  <styled.div>
+    <span
+      key="0"
+    >
+      #
+      quick&easy
+    </span>
+    <span
+      key="1"
+    >
+      #
+      healthy
+    </span>
+  </styled.div>
+</styled.div>
+`;

@@ -25,7 +25,7 @@ const NotFound = styled.div`
   text-align: center;
 `;
 
-const SingleRecipe = ({ recipe }) => {
+export const SingleRecipe = ({ recipe }) => {
   if (recipe.length === 0) {
     return (
       <div>
@@ -50,7 +50,7 @@ const SingleRecipe = ({ recipe }) => {
 };
 
 SingleRecipe.propTypes = {
-  recipe: PropTypes.object.isRequired,
+  recipe: PropTypes.oneOfType([PropTypes.array, PropTypes.object]).isRequired,
 };
 
 function mapStateToProps(state, ownProps) {

@@ -24,6 +24,7 @@ exports[`should render Navbar correctly 1`] = `
     <NavLink
       activeClassName="active"
       ariaCurrent="true"
+      exact={true}
       onClick={[Function]}
       to="/recipes"
     >

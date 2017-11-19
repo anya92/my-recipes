@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render SingleRecipe with recipe 1`] = `
+<div>
+  <Navbar />
+  <div
+    className="container"
+  >
+    <styled.div>
+      <RecipeInfo
+        recipe={
+          Object {
+            "addedAt": 1510753425607,
+            "category": "breakfast",
+            "directions": "Heat butter in nonstick skillet. Break eggs and slip into pan, one at a time. Cook slowly until whites are completely set and yolks begin to thicken but are not hard, 5 to 6 minutes. Slide turner under each egg and carefully flip it over in pan. Cook second side to desired doneness. Sprinkle with salt and pepper. Serve immediately.",
+            "image": "assets/images/fried-eggs.jpg",
+            "ingredients": Array [
+              Object {
+                "name": "eggs",
+                "quantity": "2-4",
+              },
+              Object {
+                "name": "butter",
+              },
+              Object {
+                "name": "salt",
+              },
+              Object {
+                "name": "pepper",
+              },
+            ],
+            "name": "Fried Eggs",
+            "slug": "fried-eggs",
+            "tags": Array [
+              "quick&easy",
+              "healthy",
+            ],
+            "time": "9 minutes",
+            "yields": "2 to 4 servings",
+          }
+        }
+      />
+      <RecipeImage
+        image="assets/images/fried-eggs.jpg"
+        name="Fried Eggs"
+        tags={
+          Array [
+            "quick&easy",
+            "healthy",
+          ]
+        }
+      />
+    </styled.div>
+  </div>
+</div>
+`;
+
+exports[`should render SingleRecipe without recipe 1`] = `
+<div>
+  <Navbar />
+  <div
+    className="container"
+  >
+    <styled.div>
+      <h1>
+        Not Found
+      </h1>
+    </styled.div>
+  </div>
+</div>
+`;
