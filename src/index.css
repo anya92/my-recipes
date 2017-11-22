@@ -21,7 +21,7 @@ body {
 .container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 80px 15px 0 15px;
+  padding: 80px 15px 20px 15px;
   
 }
 
@@ -29,4 +29,8 @@ body {
   .container {
     padding-top: 180px;
   }
+}
+
+input, textarea, select, button {
+  font-family: 'Pragati Narrow';
 }
