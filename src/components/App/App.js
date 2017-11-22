@@ -10,6 +10,7 @@ import Home from '../Home/Home';
 import RecipeGrid from '../RecipeGrid/RecipeGrid';
 import SingleRecipe from '../SingleRecipe/SingleRecipe';
 import AddRecipe from '../AddRecipe/AddRecipe';
+import EditRecipe from '../EditRecipe/EditRecipe';
 
 const Container = styled.div`
   font-family: 'Pragati Narrow';
@@ -30,7 +31,7 @@ const App = () => (
         <Route path="/snacks" render={props => <RecipeGrid {...props} category="snacks" />} />
         <Route path="/drinks" render={props => <RecipeGrid {...props} category="drinks" />} />
         <Route exact path="/recipes" render={props => <RecipeGrid {...props} category="all" />} />
-        <Route path="/recipes/:slug/edit" render={props => <h1>Edit {props.match.params.slug}</h1>} />
+        <Route path="/recipes/:slug/edit" component={EditRecipe} />
         <Route path="/recipes/:slug" component={SingleRecipe} />
         <Route path="/add" component={AddRecipe} />
         <Route render={() => <h1>404 Not Found</h1>} />
