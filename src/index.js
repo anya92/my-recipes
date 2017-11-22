@@ -11,10 +11,11 @@ import './index.css';
 import recipes from './recipes';
 
 import App from './components/App/App';
+import reducer from './reducers';
 
 /* eslint-disable no-underscore-dangle */
 const store = createStore(
-  state => state,
+  reducer,
   recipes,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 );
