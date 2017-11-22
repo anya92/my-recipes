@@ -4,6 +4,7 @@ function getDate(daysAgo = 0) {
 
 module.exports = [
   {
+    id: '1',
     name: 'Fried Eggs',
     directions: 'Heat butter in nonstick skillet. Break eggs and slip into pan, one at a time. Cook slowly until whites are completely set and yolks begin to thicken but are not hard, 5 to 6 minutes. Slide turner under each egg and carefully flip it over in pan. Cook second side to desired doneness. Sprinkle with salt and pepper. Serve immediately.',
     ingredients: [

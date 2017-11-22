@@ -14,6 +14,8 @@ export const addNewRecipe = (recipe) => {
 export const editRecipe = (id, recipe) => {
   const action = {
     type: EDIT_RECIPE,
+    payload: recipe,
+    id,
   };
   return action;
 };

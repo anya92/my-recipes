@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
-import uniqId from 'uniqid';
 
+import { editRecipe } from '../../actions';
 import Navbar from '../Navbar/Navbar';
 import RecipeForm from '../RecipeForm/RecipeForm';
 
@@ -15,7 +15,9 @@ const Title = styled.h1`
 
 class EditRecipe extends Component {
   onSubmit = recipe => {
-    console.log(recipe, uniqId());
+    console.log(recipe);
+    this.props.editRecipe(recipe.id, recipe);
+    this.props.history.push(`/recipes/${recipe.slug}`);
   }
   onCancel = () => {
     this.props.history.goBack();    
@@ -40,4 +42,4 @@ function mapStateToProps(state, ownProps) {
   };
 }
 
-export default connect(mapStateToProps)(EditRecipe);
+export default connect(mapStateToProps, { editRecipe })(EditRecipe);

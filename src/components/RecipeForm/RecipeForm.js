@@ -134,6 +134,7 @@ export default class componentName extends Component {
     } else {
       this.setState(() => ({ error: '' }));
       this.props.onSubmit({
+        id: this.props.recipe ? this.props.recipe.id : 'abcd',
         name: this.state.name,
         directions: this.state.directions,
         ingredients,
