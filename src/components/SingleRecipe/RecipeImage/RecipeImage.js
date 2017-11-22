@@ -14,6 +14,9 @@ const StyledRecipeImage = styled.div`
       max-height: 400px;
     }
   }
+  @media all and (max-width: 580px) {
+    grid-area: image;
+  }
 `;
 
 const Tags = styled.div`

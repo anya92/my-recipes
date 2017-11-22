@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import slug from 'slug';
 
 import { Input, Textarea } from './Inputs/Input';
 import Checkbox from './Inputs/Checkbox';
@@ -142,6 +143,7 @@ export default class componentName extends Component {
         yields: this.state.yields, // + servings
         image: this.state.image,
         addedAt: this.props.recipe ? this.props.recipe.addedAt : Date.now(),
+        slug: slug(this.state.name).toLowerCase(),
       });
     }
   }

@@ -117,8 +117,8 @@ const RecipeInfo = ({ recipe }) => {
       </Ingredients>
       <hr />
       <Info>
-        <span><i className="fa fa-clock-o" />{recipe.time}</span>
-        <span><i className="fa fa-users" />{recipe.yields}</span>
+        <span><i className="fa fa-clock-o" />{recipe.time} minute/s</span>
+        <span><i className="fa fa-users" />{recipe.yields} serving/s</span>
       </Info>
     </StyledRecipeInfo>
   );

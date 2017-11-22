@@ -18,6 +18,7 @@ const Recipe = styled.div`
   }
   @media all and (max-width: 580px) {
     grid-template-columns: 1fr;
+    grid-template-areas: 'image';
   }
 `;
 
