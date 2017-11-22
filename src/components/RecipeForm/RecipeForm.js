@@ -28,14 +28,14 @@ export default class componentName extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: this.props.recipe.name || '',
-      directions: this.props.recipe.directions || '',
-      ingredients: this.props.recipe.ingredients || [{name: '', quantity: ''}, {name: '', quantity: ''}, {name: '', quantity: ''}],
-      category: this.props.recipe.category || '',
-      tags: this.props.recipe.tags || [],
-      time: this.props.recipe.time || '',
-      yields: this.props.recipe.yields || '',
-      image: this.props.recipe.image || '',
+      name: props.recipe ? props.recipe.name : '',
+      directions: props.recipe ? props.recipe.directions : '',
+      ingredients: props.recipe ? props.recipe.ingredients : [{name: '', quantity: ''}, {name: '', quantity: ''}, {name: '', quantity: ''}],
+      category: props.recipe ? props.recipe.category : '',
+      tags: props.recipe ? props.recipe.tags : [],
+      time: props.recipe ? props.recipe.time : '',
+      yields: props.recipe ? props.recipe.yields : '',
+      image: props.recipe ? props.recipe.image : '',
       error: '',
       errors: {
         name: false,
