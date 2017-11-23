@@ -35,23 +35,24 @@ const StyledInput = styled.div`
   }
   input {
     height: 40px;
-    ${props => (props.span && 'text-align: right; padding-right: 8px;')};
+    ${props => (props.additionalText && 'text-align: right; padding-right: 8px;')};
   }
 `;
 
 export const Input = ({
-  name, value, handleInputChange, span, type = 'text', error = false,
+  name, value, handleInputChange, additionalText, type = 'text', error = false,
 }) => (
-  <StyledInput span={span} error={error}>
+  <StyledInput additionalText={additionalText} error={error}>
     <label htmlFor={name}>{name}</label>
     <div>
       <input
         type={type}
+        min={type === 'number' ? 0 : ''}
         id={name}
         value={value}
         onChange={e => handleInputChange(e, name)}
       />
-      {span && <span>{span}</span>}
+      {additionalText && <span>{additionalText}</span>}
     </div>
   </StyledInput>
 );

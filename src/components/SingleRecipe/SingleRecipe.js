@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -6,6 +6,8 @@ import PropTypes from 'prop-types';
 import Navbar from '../Navbar/Navbar';
 import RecipeInfo from './RecipeInfo/RecipeInfo';
 import RecipeImage from './RecipeImage/RecipeImage';
+
+import { deleteRecipe } from '../../actions';
 
 const Recipe = styled.div`
   display: grid;
@@ -26,28 +28,40 @@ const NotFound = styled.div`
   text-align: center;
 `;
 
-export const SingleRecipe = ({ recipe }) => {
-  if (recipe.length === 0) {
+export class SingleRecipe extends Component {
+  confirmDelete = () => {
+    return window.confirm(`Are you sure that you want to permanently delete "${this.props.recipe.name}"?`);
+  }
+  deleteRecipe = (id) => {
+    if (this.confirmDelete()) {
+      this.props.deleteRecipe(id);
+      this.props.history.goBack();
+    }
+  }
+  render() {
+    const { recipe } = this.props;
+    if (recipe.length === 0) {
+      return (
+        <div>
+          <Navbar />
+          <div className="container">
+            <NotFound><h1>Not Found</h1></NotFound>
+          </div>
+        </div>
+      );
+    }
     return (
       <div>
         <Navbar />
         <div className="container">
-          <NotFound><h1>Not Found</h1></NotFound>
+          <Recipe>
+            <RecipeInfo recipe={recipe} deleteRecipe={this.deleteRecipe} />
+            <RecipeImage name={recipe.name} image={recipe.image} tags={recipe.tags} />
+          </Recipe>
         </div>
       </div>
     );
   }
-  return (
-    <div>
-      <Navbar />
-      <div className="container">
-        <Recipe>
-          <RecipeInfo recipe={recipe} />
-          <RecipeImage name={recipe.name} image={recipe.image} tags={recipe.tags} />
-        </Recipe>
-      </div>
-    </div>
-  );
 };
 
 SingleRecipe.propTypes = {
@@ -59,4 +73,4 @@ function mapStateToProps(state, ownProps) {
   return { recipe: recipe[0] || [] };
 }
 
-export default connect(mapStateToProps)(SingleRecipe);
+export default connect(mapStateToProps, { deleteRecipe })(SingleRecipe);

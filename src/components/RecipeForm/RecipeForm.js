@@ -177,17 +177,18 @@ export class RecipeForm extends Component {
           <Row>
             <Input 
               name="time" 
-              type="number" 
+              type="number"
               value={this.state.time} 
               handleInputChange={this.onInputChange} 
-              error={this.state.errors.time} span="minute/s" 
+              error={this.state.errors.time} 
+              additionalText="minute/s" 
             />
             <Input 
               name="yields" 
               value={this.state.yields} 
               handleInputChange={this.onInputChange} 
               error={this.state.errors.yields} 
-              span="serving/s" 
+              additionalText="serving/s" 
             />          
           </Row>  
         </div>

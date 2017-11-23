@@ -91,7 +91,7 @@ const Info = styled.div`
   }
 `;
 
-const RecipeInfo = ({ recipe }) => {
+const RecipeInfo = ({ recipe, deleteRecipe }) => {
   const ingredients = recipe.ingredients.map((ingredient, i) => (
     <div key={i}>
       <div>{ingredient.name}</div>
@@ -103,7 +103,8 @@ const RecipeInfo = ({ recipe }) => {
       <Name>
         <h1>{recipe.name}</h1>
         <Options>
-          <Link to={`/recipes/${recipe.slug}/edit`}><i className="fa fa-pencil" />Edit</Link> <i className="fa fa-times" />Delete
+          <Link to={`/recipes/${recipe.slug}/edit`}><i className="fa fa-pencil" />Edit</Link>
+          <div onClick={() => deleteRecipe(recipe.id)}><i className="fa fa-times" />Delete</div>
         </Options>
       </Name>
       <AddedAt>added {moment(recipe.addedAt).from(moment())}</AddedAt>
