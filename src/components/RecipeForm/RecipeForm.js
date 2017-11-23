@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import styled from 'styled-components';
-import slug from 'slug';
 import uniqId from 'uniqid';
 
 import { Input, Textarea } from './Inputs/Input';
@@ -9,6 +9,8 @@ import Select from './Inputs/Select';
 import Ingredients from './Inputs/Ingredients';
 import ImageForm from './Inputs/ImageForm';
 import Button from './Button';
+
+import getSlug from '../../helpers/slug';
 
 const Form = styled.form`
   display: grid;
@@ -26,7 +28,7 @@ const Row = styled.div`
   grid-gap: 10px;
 `;
 
-export default class componentName extends Component {
+export class RecipeForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -105,7 +107,7 @@ export default class componentName extends Component {
 
   onSubmit = e => {
     e.preventDefault();
-    // validate 
+    // validate fields
     function validateFields(field) {
       if (field === 'ingredients') {
         if (!this.state.ingredients.some(ingredient => ingredient.name !== '')) {
@@ -129,24 +131,18 @@ export default class componentName extends Component {
       ingredient.name !== ''
     ));
 
-    const validationFields = ['name', 'directions', 'ingredients', 'category', 'time', 'yields'];
-    if (!validationFields.every(field => validateFields.call(this, field))) {
+    const requiredFields = ['name', 'directions', 'ingredients', 'category', 'time', 'yields'];
+
+    if (!requiredFields.every(field => validateFields.call(this, field))) {
       this.setState(() => ({ error: 'Please provide all requested information' }));
     } else {
       this.setState(() => ({ error: '' }));
-      this.props.onSubmit({
-        id: this.props.recipe ? this.props.recipe.id : uniqId(),
-        name: this.state.name,
-        directions: this.state.directions,
-        ingredients,
-        category: this.state.category,
-        tags: this.state.tags,
-        time: this.state.time, // + minutes
-        yields: this.state.yields, // + servings
-        image: this.state.image,
-        addedAt: this.props.recipe ? this.props.recipe.addedAt : Date.now(),
-        slug: slug(this.state.name).toLowerCase(),
-      });
+      const { name, directions, category, tags, time, yields, image } = this.state;
+      const { recipe, recipes } = this.props;
+      const id = recipe ? recipe.id : uniqId();
+      const addedAt = recipe ? recipe.addedAt : Date.now();
+      const slug = getSlug(recipe, name, recipes);
+      this.props.onSubmit({ id, addedAt, slug, name, directions, ingredients, category, tags, time, yields, image });
     }
   }
 
@@ -154,8 +150,18 @@ export default class componentName extends Component {
     return (
       <Form onSubmit={this.onSubmit}>
         <div>
-          <Input name="name" value={this.state.name} handleInputChange={this.onInputChange} error={this.state.errors.name} />
-          <Textarea name="directions" value={this.state.directions} handleInputChange={this.onInputChange} error={this.state.errors.directions} />
+          <Input 
+            name="name" 
+            value={this.state.name} 
+            handleInputChange={this.onInputChange} 
+            error={this.state.errors.name} 
+          />
+          <Textarea 
+            name="directions" 
+            value={this.state.directions} 
+            handleInputChange={this.onInputChange} 
+            error={this.state.errors.directions} 
+          />
           <Ingredients 
             ingredients={this.state.ingredients}
             handleIngredientChange={this.onIngredientChange}
@@ -163,16 +169,38 @@ export default class componentName extends Component {
             removeIngredientInput={this.removeIngredientInput}
             error={this.state.errors.ingredients}
           />
-          <Select category={this.state.category} handleInputChange={this.onInputChange} error={this.state.errors.category} />
+          <Select 
+            category={this.state.category} 
+            handleInputChange={this.onInputChange} 
+            error={this.state.errors.category} 
+          />
           <Row>
-            <Input name="time" type="number" value={this.state.time} handleInputChange={this.onInputChange} error={this.state.errors.time} span="minute(s)" />
-            <Input name="yields" value={this.state.yields} handleInputChange={this.onInputChange} error={this.state.errors.yields} span="serving(s)" />          
+            <Input 
+              name="time" 
+              type="number" 
+              value={this.state.time} 
+              handleInputChange={this.onInputChange} 
+              error={this.state.errors.time} span="minute/s" 
+            />
+            <Input 
+              name="yields" 
+              value={this.state.yields} 
+              handleInputChange={this.onInputChange} 
+              error={this.state.errors.yields} 
+              span="serving/s" 
+            />          
           </Row>  
         </div>
         <div>
-          <ImageForm image={this.state.image} setImage={this.setImage} />
-          <Checkbox tags={this.state.tags} handleTagChange={this.onTagChange} />
-          { this.state.error }
+          <ImageForm 
+            image={this.state.image} 
+            setImage={this.setImage} 
+          />
+          <Checkbox 
+            tags={this.state.tags} 
+            handleTagChange={this.onTagChange} 
+          />
+          { this.state.error && <p>this.state.error</p> } {/* Error */}
           <Row>
             <Button type="button" onClick={this.props.onCancel}>Cancel</Button>
             <Button type="submit" blue>Save</Button>
@@ -182,3 +210,9 @@ export default class componentName extends Component {
     );
   }
 }
+
+function mapStateToProps(state) {
+  return { recipes: state };
+}
+
+export default connect(mapStateToProps)(RecipeForm);
