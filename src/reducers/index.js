@@ -5,18 +5,15 @@ import {
 
 export default (state = [], action) => {
   switch (action.type) {
-    case ADD_NEW_RECIPE:
+    case ADD_NEW_RECIPE: {
       const newRecipe = action.payload;
       return [...state, newRecipe];
-    case EDIT_RECIPE:
+    }
+    case EDIT_RECIPE: {
       const recipe = action.payload;
       const { id } = action;
-      return state.map(el => {
-        if (el.id === id) {
-          return recipe;
-        }
-        return el;
-      });
+      return state.map(el => (el.id === id ? recipe : el));
+    }
     default:
       return state;
   }

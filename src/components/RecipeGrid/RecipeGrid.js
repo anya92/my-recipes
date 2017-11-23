@@ -19,7 +19,7 @@ const CardsGrid = styled.div`
 `;
 
 export const RecipeGrid = ({ recipes }) => {
-  const recipesCards = recipes.map(recipe => <RecipeCard key={recipe.slug} recipe={recipe} />);
+  const recipesCards = recipes.map(recipe => <RecipeCard key={recipe.id} recipe={recipe} />);
   return (
     <div>
       <Navbar />

@@ -37,8 +37,8 @@ const Select = ({ category, handleInputChange, error }) => (
       <option value="breakfast">Breakfast</option>
       <option value="dinner">Dinner</option>
       <option value="dessert">Dessert</option>
-      <option value="snack">Snack</option>
-      <option value="drink">Drink</option>
+      <option value="snacks">Snack</option>
+      <option value="drinks">Drink</option>
     </select>
   </StyledSelect>
 );

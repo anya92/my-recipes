@@ -4,7 +4,7 @@ function getDate(daysAgo = 0) {
 
 module.exports = [
   {
-    id: '1',
+    id: '0',
     name: 'Fried Eggs',
     directions: 'Heat butter in nonstick skillet. Break eggs and slip into pan, one at a time. Cook slowly until whites are completely set and yolks begin to thicken but are not hard, 5 to 6 minutes. Slide turner under each egg and carefully flip it over in pan. Cook second side to desired doneness. Sprinkle with salt and pepper. Serve immediately.',
     ingredients: [
@@ -22,6 +22,7 @@ module.exports = [
     slug: 'fried-eggs',
   },
   {
+    id: '1',
     name: 'Pancakes',
     directions: 'Whisk eggs, milk and vanilla together in a jug. Sift flour into a large bowl. Stir in sugar. Make a well in the centre. Add milk mixture. Whisk until just combined. Heat a large non-stick frying pan over medium heat. Grease pan with butter. cook 2 pancakes for 2 minutes or until bubbles appear on surface. Turn and cook for a further 1-2 minutes or until cooked through.',
     ingredients: [
@@ -40,6 +41,7 @@ module.exports = [
     slug: 'pancakes',
   },
   {
+    id: '2',
     name: 'Oatmeal',
     directions: 'Prepare the oats according to the package directions. Top with the fruits and sunflower seeds.',
     ingredients: [
@@ -56,6 +58,7 @@ module.exports = [
     slug: 'oatmeal',
   },
   {
+    id: '3',
     name: 'Waffles',
     directions: 'Combine almond milk and vinegar in a small mixing bowl and let set for a few minutes. Then add olive oil. Add dry ingredients to a large mixing bowl and whisk until well combined. Add wet ingredients to dry and mix until well incorporated. Let set for 5-10 minutes while your waffle iron preheats. Once waffle iron is ready, pour on about 1/2 cup of batter. Cook according to manufacturer instructions. Serve immediately with desired toppings.',
     ingredients: [
@@ -77,6 +80,7 @@ module.exports = [
     slug: 'waffles',
   },
   {
+    id: '4',
     name: 'Bacon and Tomato Sandwich',
     directions: 'Assemble sandwich.',
     ingredients: [
@@ -95,6 +99,7 @@ module.exports = [
     slug: 'bacon-and-tomato-sandwich',
   },
   {
+    id: '5',
     name: 'Bacon & Cheese Fries',
     directions: 'Cook French fries according to package directions. Place fries on a broiler-proof dish or platter. Sprinkle with cheese, onions and bacon. Broil for 1-2 minutes or until cheese is melted. Serve with ranch dressing.',
     ingredients: [
@@ -113,6 +118,7 @@ module.exports = [
     slug: 'bacon-and-cheese-fries',
   },
   {
+    id: '6',
     name: 'Spaghetti with Asparagus, Smoked Mozzarella and Prosciutto',
     directions: 'Cook the asparagus in a large pot of boiling salted water until crisp tender, about 2 to 3 minutes. When cool, strain, cut asparagus into 1-inch pieces, and set aside. Cook the pasta until al dente. Heat the oil in a heavy large skillet over medium heat. Add asparagus to the skillet. Season with salt and pepper, to taste. Add the pasta, prosciutto and mozzarella. Season with salt and pepper, to taste, and serve.',
     ingredients: [
@@ -132,6 +138,7 @@ module.exports = [
     slug: 'spaghetti-with-asparagus-smoked-mozzarella-and-prosciutto',
   },
   {
+    id: '7',
     name: 'Beef Noodle Soup',
     directions: 'Cut beef into larger chunks and then place in a large pot with enough cold water. Throw one spring onion and several ginger slices, bring to a boil and then pick the beef chunks out. Heat up around 2 tablespoons of oil for half minute over slow fire, then place garlic, ginger, and onion in, fry until aromatic. Return cooked beef and stir for several minutes until the beef is slightly browned, place tomato wedges and add warm stock to cover all the content. Bring to boil and then slow down the fire and simmer for around 1 hour. Pick the beef out and strain the liquid to remove cooked vegetables and spices, add salt to taste and simmer for another 15-20 minutes. Cook noodles according to package instructions. Transfer noodles to serving bowl, pour in soup base and top with beef.',
     ingredients: [
@@ -154,6 +161,7 @@ module.exports = [
     slug: 'beef-noodle-soup',
   },
   {
+    id: '8',
     name: 'Clams in White Wine',
     directions: 'In a large skillet with a lid, heat butter and olive oil over medium heat. Once butter melts, add shallot and garlic. Cook about 1 minute. Add clams to skillet, pour wine over the top. Cover and cook for 10 minutes or until shells open. Try to refrain from removing the lid during the first 10 minutes. Carefully transfer clams and broth to a serving bowl.',
     ingredients: [
@@ -173,6 +181,7 @@ module.exports = [
     slug: 'clams-in-white-wine',
   },
   {
+    id: '9',
     name: 'Vegan Dumplings',
     directions: 'Combine flour, water and salt in a bowl. Mix to form a slightly sticky dough. Divide into 12. Roll out each ball between two sheets of wax paper as thin as possible. Add all the veggies to a non-stick skillet over medium high heat. Once they begin to sizzle, add about 1/3 cup of water, cover the pan, and let them steam for 4-5 minutes over medium heat till soft. Remove from heat and allow to cool for 5-10 minutes. Remove one wrapper from the bowl. Spoon about a teaspoon of filling into the center of the wrapper. Fold in half and press the edges together firmly. Fill a shallow pan with enough water to completely cover the bottom. Bring to a boil. Add your dumplings. Cover and steam for 5-6 minutes. Remove from the pan. Serve plain or with dipping sauce of your choice.',
     ingredients: [
@@ -193,6 +202,7 @@ module.exports = [
     slug: 'vegan-dumplings',
   },
   {
+    id: '10',
     name: 'Vegan Strawberry Ice Cream',
     directions: 'Combine all ingredients in a strong blender or food processor and mix just until smooth. Transfer to a plastic container and place in freezer for 30 minutes. Churn the mixture with a sturdy whisk or fork, breaking up any ice crystals or frozen bits; return it to the freezer for another half-hour. Repeat until it firms up (about 3 hours altogether).',
     ingredients: [
@@ -210,6 +220,7 @@ module.exports = [
     slug: 'vegan-strawberry-ice-cream',
   },
   {
+    id: '11',
     name: 'Tiramisu',
     directions: 'Combine egg yolks and sugar in the top of a double boiler, over boiling water. Reduce heat to low, and cook for about 10 minutes, stirring constantly. Add Mascarpone to whipped yolks, beat until combined. In a separate bowl, whip cream to stiff peaks. Gently fold the whipped cream in the mascarpone sabayon mixture and set aside. Mix the cold espresso with the coffee liquor and dip the lady fingers into the mixture. Arrange the lady fingers in the bottom of a baking dish.Spoon half the mascarpone cream filling over the lady fingers. Repeat process. Refrigerate 4 hours or overnight. Dust with cocoa before serving.',
     ingredients: [
@@ -231,6 +242,7 @@ module.exports = [
     slug: 'tiramisu',
   },
   {
+    id: '12',
     name: 'Strawberry Smoothie',
     directions: 'In blender, place yogurt, strawberries and juice. Cover. Blend on medium speed about 2 minutes or until smooth. Pour into serving glass. Serve immediately.',
     ingredients: [
@@ -247,6 +259,7 @@ module.exports = [
     slug: 'strawberry-smoothie',
   },
   {
+    id: '13',
     name: 'Cheesecake',
     directions: 'Preheat the oven to 350°F. Make the crust by stirring together all of the crust ingredients, mixing until thoroughly combined. Press the crumbs into the bottom and up the sides of the pie pan. Make the filling by mixing together the room-temperature cream cheese and sugar until smooth. Mix in the eggs and vanilla, again mixing until smooth. Pour the filling into the crust. Place the cheesecake in the oven. Bake it for 20 minutes, then add a crust shield. Bake for an additional 10 minutes (for a total of about 30 minutes). Remove the cheesecake from the oven, and set it on a rack to cool.',
     ingredients: [
@@ -267,6 +280,7 @@ module.exports = [
     slug: 'cheesecake',
   },
   {
+    id: '14',
     name: 'Coconut Panna Cotta',
     directions: 'Pour the coconut milk and milk into a saucepan, then add the sugar. Split the vanilla pod in half and scrape out the seeds, then add to the pan with the empty pod. Bring to the boil, then remove from the heat and leave to infuse for 5 mins. Spoon 200ml of the hot mixture into a small bowl. Shake over the gelatine and whisk into the mixture until dissolved. Pour into 6 x 200ml metal dariole moulds and place in the fridge for at least 2 hrs until firm with a slight wobble.',
     ingredients: [
@@ -286,6 +300,7 @@ module.exports = [
     slug: 'coconut-panna-cotta',
   },
   {
+    id: '15',
     name: 'Burger',
     directions: 'In a bowl, mix ground beef, egg, onion, bread crumbs, salt and pepper until well blended. Divide mixture into four equal portions and shape each into a patty. Lay burgers on an oiled barbecue grill. Cook burgers, turning once, until browned on both sides and no longer pink inside, 7 to 8 minutes total. Remove from grill. Lay buns, cut side down, on grill and cook until lightly toasted, 30 seconds to 1 minute. Spread mayonnaise on bun bottoms. Add lettuce, burger, onion, and salt and pepper to taste.',
     ingredients: [
@@ -308,6 +323,7 @@ module.exports = [
     slug: 'burger',
   },
   {
+    id: '16',
     name: 'French Fries',
     directions: 'Cut the Potatoes. Put the cut potatoes in a large bowl, cover with cool water, and soak for at least 20 minutes. Drain the potatoes and pat them dry with paper towels. Bring at least 2 inches of oil in a large pot. Fry potatoes, at this fairly low temperature until the fries are cooked through but still as pale as they were when you put them in the oil, about 5 minutes. Lift the potatoes out of the oil and let the rest of it drain. Just before serving fry over high heat, till a golden brown and serve.',
     ingredients: [
@@ -324,6 +340,7 @@ module.exports = [
     slug: 'french-fries',
   },
   {
+    id: '17',
     name: 'Popcorn',
     directions: 'Heat the oil in a saucepan or pot with a lid set over medium-high heat. Pour in popcorn kernels and sprinkle enough salt to lightly cover the layer of kernels. Add the butter to the pot and cover with the lid. As soon as the kernels start to pop, shake the pan back and forth across the burner constantly until the popping slows down. As soon as the pops are about 2 seconds apart, remove from the heat and pour into a serving bowl. Taste, and season with additional salt if desired.',
     ingredients: [
@@ -341,6 +358,7 @@ module.exports = [
     slug: 'popcorn',
   },
   {
+    id: '18',
     name: 'Tomato Bruschetta',
     directions: 'Preheat oven to 300°F. Tear each tomato in half and press out and discard the seeds. Arrange tomatoes on prepared baking sheet in one layer, season with salt, and drizzle all over with olive oil. Transfer to oven and cook until excess juices have evaporated (about 1 hour). Transfer oven-roasted tomatoes to a work surface and chop finely. Transfer to a large mixing bowl. Add olive oil and basil and stir well. Season with salt and add red wine vinegar, about 1 teaspoon at a time, until tomatoes are very lightly tart. Stir in a pinch of sugar. Rub top sides of toasts all over with garlic. Spoon tomatoes on top and serve.',
     ingredients: [
@@ -362,6 +380,7 @@ module.exports = [
     slug: 'tomato-bruschetta',
   },
   {
+    id: '19',
     name: 'Mixed Nuts',
     directions: 'Simply mix everything in a large mixing bow.',
     ingredients: [
@@ -384,6 +403,7 @@ module.exports = [
     slug: 'mixed-nuts',
   },
   {
+    id: '20',
     name: 'Strawberry Cocktail',
     directions: 'Put a few strawberries into a tall 16 oz glass and muddle with a spoon. Add Seagram\'s Escapes, Sprite, Club Soda, a squeeze of fresh lime and stir. Fill glass with ice. Garnish with strawberry or a lime and enjoy!',
     ingredients: [
@@ -403,6 +423,7 @@ module.exports = [
     slug: 'strawberry-cocktail',
   },
   {
+    id: '21',
     name: 'Nettle Tea Mojito',
     directions: 'Brew tea all together with the 1/2 cup hot water and 2 tea bags in a cup. To your cocktail glasses, split the tea in half, pouring in each glass. Add 1/4 tsp of raw honey to each glass and stir to dissolve in the hot water. Next, squeeze half a lime in each glass and stir. Tear mint leaves up by hand a bit to release some of the oils and divide evenly amongst glasses. Now add your crushed ice, followed by your sparkling or cold water to fill to the top with. Garnish with whole mint leaves and serve.',
     ingredients: [
@@ -423,6 +444,7 @@ module.exports = [
     slug: 'nettle-tea-mojito',
   },
   {
+    id: '22',
     name: 'Matcha Green Tea Latte',
     directions: 'Spoon the matcha green tea powder and the sugar into a mug or cup. Add the warm water and mix with a spoon or with a whisk until it is a smooth dark green paste to ensure no lumps form. Warm the milk in a small saucepan and pour into the mug until nearly full. Use cold milk for an iced latte. Use a whisk to mix the paste and milk together until smooth and light green in colour.',
     ingredients: [
@@ -440,6 +462,7 @@ module.exports = [
     slug: 'matcha-green-tea-latte',
   },
   {
+    id: '23',
     name: 'Mint Lemonade',
     directions: 'Blend the lemon juice, agave nectar, and mint leaves on high speed for 10 to 15 seconds or until the mint leaves are well blended. Pour into a pitcher and add 6 cups of the water. Keep adding water until it reaches your desired strength.',
     ingredients: [
@@ -457,6 +480,7 @@ module.exports = [
     slug: 'mint-lemonade',
   },
   {
+    id: '24',
     name: 'Espresso',
     directions: 'Place ground coffee in the filter of a drip coffeemaker. Add water; brew according to manufacturer\'s instructions. Serve immediately in espresso cups.',
     ingredients: [

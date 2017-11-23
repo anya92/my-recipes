@@ -8,18 +8,21 @@ import '../node_modules/normalize.css/normalize.css';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
 import './index.css';
 
-import recipes from './recipes';
-
 import App from './components/App/App';
 import reducer from './reducers';
+import { loadState, saveState } from './localStorage';
 
 /* eslint-disable no-underscore-dangle */
 const store = createStore(
   reducer,
-  recipes,
+  loadState(),
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 );
 /* eslint-enable */
+
+store.subscribe(() => {
+  saveState(store.getState());
+});
 
 render(
   <Provider store={store}>

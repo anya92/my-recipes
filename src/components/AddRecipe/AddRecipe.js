@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
-import uniqId from 'uniqid';
 
 import Navbar from '../Navbar/Navbar';
 import RecipeForm from '../RecipeForm/RecipeForm';
@@ -15,8 +14,6 @@ const Title = styled.h1`
 
 class AddRecipe extends Component {
   onSubmit = (recipe) => {
-    recipe.id = uniqId();
-    // redux action
     this.props.addNewRecipe(recipe);
     this.props.history.push(`/recipes/${recipe.slug}`);
   }

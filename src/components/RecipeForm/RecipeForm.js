@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import slug from 'slug';
+import uniqId from 'uniqid';
 
 import { Input, Textarea } from './Inputs/Input';
 import Checkbox from './Inputs/Checkbox';
@@ -134,7 +135,7 @@ export default class componentName extends Component {
     } else {
       this.setState(() => ({ error: '' }));
       this.props.onSubmit({
-        id: this.props.recipe ? this.props.recipe.id : 'abcd',
+        id: this.props.recipe ? this.props.recipe.id : uniqId(),
         name: this.state.name,
         directions: this.state.directions,
         ingredients,

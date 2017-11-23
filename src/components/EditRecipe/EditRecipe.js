@@ -15,7 +15,6 @@ const Title = styled.h1`
 
 class EditRecipe extends Component {
   onSubmit = recipe => {
-    console.log(recipe);
     this.props.editRecipe(recipe.id, recipe);
     this.props.history.push(`/recipes/${recipe.slug}`);
   }
