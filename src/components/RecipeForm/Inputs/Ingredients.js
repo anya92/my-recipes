@@ -1,15 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
+
+import Label from '../styled/Label';
 
 const StyledIngredients = styled.div`
-  font-size: 1.2rem;
-  label {
-    display: block;
-    text-transform: capitalize;
-    color: #4F4F4F;
-    font-weight: 700;
-    margin: 5px 0;
-  }
 `;
 
 const Ingredient = styled.div`
@@ -67,7 +62,7 @@ const Ingredients = ({
   ingredients, handleIngredientChange, addIngredientInput, removeIngredientInput, error,
 }) => (
   <StyledIngredients>
-    <label htmlFor="ingredients">Ingredients</label>
+    <Label>Ingredients *</Label>
     {
       ingredients.map((ing, i) => (
         <Ingredient key={i} error={error} i={i}>
@@ -88,5 +83,13 @@ const Ingredients = ({
     <Add onClick={addIngredientInput}>Add new ingredient</Add>
   </StyledIngredients>
 );
+
+Ingredients.propTypes = {
+  ingredients: PropTypes.arrayOf(PropTypes.object).isRequired,
+  handleIngredientChange: PropTypes.func.isRequired,
+  addIngredientInput: PropTypes.func.isRequired,
+  removeIngredientInput: PropTypes.func.isRequired,
+  error: PropTypes.bool.isRequired,
+};
 
 export default Ingredients;

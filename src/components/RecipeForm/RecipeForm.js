@@ -8,7 +8,7 @@ import Checkbox from './Inputs/Checkbox';
 import Select from './Inputs/Select';
 import Ingredients from './Inputs/Ingredients';
 import ImageForm from './Inputs/ImageForm';
-import Button from './Button';
+import Button from './styled/Button';
 
 import getSlug from '../../helpers/slug';
 
@@ -20,6 +20,7 @@ const Form = styled.form`
     grid-template-columns: 1fr;
     grid-gap: 20px;
   }
+  font-size: 1.2rem;
 `;
 
 const Row = styled.div`
@@ -154,13 +155,15 @@ export class RecipeForm extends Component {
             name="name" 
             value={this.state.name} 
             handleInputChange={this.onInputChange} 
-            error={this.state.errors.name} 
+            error={this.state.errors.name}
+            isRequired={true}
           />
           <Textarea 
             name="directions" 
             value={this.state.directions} 
             handleInputChange={this.onInputChange} 
-            error={this.state.errors.directions} 
+            error={this.state.errors.directions}
+            isRequired={true}
           />
           <Ingredients 
             ingredients={this.state.ingredients}
@@ -172,7 +175,7 @@ export class RecipeForm extends Component {
           <Select 
             category={this.state.category} 
             handleInputChange={this.onInputChange} 
-            error={this.state.errors.category} 
+            error={this.state.errors.category}
           />
           <Row>
             <Input 
@@ -181,14 +184,16 @@ export class RecipeForm extends Component {
               value={this.state.time} 
               handleInputChange={this.onInputChange} 
               error={this.state.errors.time} 
-              additionalText="minute/s" 
+              additionalText="minute/s"
+              isRequired={true}
             />
             <Input 
               name="yields" 
               value={this.state.yields} 
               handleInputChange={this.onInputChange} 
               error={this.state.errors.yields} 
-              additionalText="serving/s" 
+              additionalText="serving/s"
+              isRequired={true}
             />          
           </Row>  
         </div>
@@ -201,7 +206,7 @@ export class RecipeForm extends Component {
             tags={this.state.tags} 
             handleTagChange={this.onTagChange} 
           />
-          { this.state.error && <p>this.state.error</p> } {/* Error */}
+          { this.state.error && <p>{this.state.error}</p> } {/* Error */}
           <Row>
             <Button type="button" onClick={this.props.onCancel}>Cancel</Button>
             <Button type="submit" blue>Save</Button>

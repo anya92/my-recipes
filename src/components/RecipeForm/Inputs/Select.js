@@ -1,16 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
+
+import Label from '../styled/Label';
 
 const StyledSelect = styled.div`
   margin: 10px 0;
-  font-size: 1.2rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   max-width: 100%;
   label {
-    color: #4F4F4F;
-    font-weight: 700;
     margin: 0 10px;
   }
   select {
@@ -27,7 +27,7 @@ const StyledSelect = styled.div`
 
 const Select = ({ category, handleInputChange, error }) => (
   <StyledSelect error={error}>
-    <label htmlFor="category">Category</label>
+    <Label htmlFor="category">Category *</Label>
     <select
       id="category"
       value={category || 'Choose'}
@@ -42,5 +42,11 @@ const Select = ({ category, handleInputChange, error }) => (
     </select>
   </StyledSelect>
 );
+
+Select.propTypes = {
+  category: PropTypes.string.isRequired,
+  handleInputChange: PropTypes.func.isRequired,
+  error: PropTypes.bool.isRequired,
+};
 
 export default Select;

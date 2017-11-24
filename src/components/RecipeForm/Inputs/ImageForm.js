@@ -21,7 +21,6 @@ const ChangeImageLink = styled.div`
 `;
 
 const StyledImageForm = styled.div`
-  font-size: 1.2rem;
   margin-bottom: 10px;
   label {
     display: block;

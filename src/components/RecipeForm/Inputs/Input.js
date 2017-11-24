@@ -1,15 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
+
+import Label from '../styled/Label';
 
 const StyledInput = styled.div`
-  font-size: 1.2rem;
-  label {
-    display: block;
-    text-transform: capitalize;
-    color: #4F4F4F;
-    font-weight: 700;
-    margin: 5px 0;
-  }
   div {
     display: flex;
     span {
@@ -40,10 +35,10 @@ const StyledInput = styled.div`
 `;
 
 export const Input = ({
-  name, value, handleInputChange, additionalText, type = 'text', error = false,
+  name, value, handleInputChange, additionalText, type = 'text', error = false, isRequired,
 }) => (
   <StyledInput additionalText={additionalText} error={error}>
-    <label htmlFor={name}>{name}</label>
+    <Label htmlFor={name}>{name} {isRequired && '*'}</Label>
     <div>
       <input
         type={type}
@@ -57,11 +52,26 @@ export const Input = ({
   </StyledInput>
 );
 
+Input.defaultProps = {
+  additionalText: '',
+  type: 'text',
+  error: false,
+};
+
+Input.propTypes = {
+  name: PropTypes.string.isRequired,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  handleInputChange: PropTypes.func.isRequired,
+  additionalText: PropTypes.string,
+  type: PropTypes.string,
+  error: PropTypes.bool,
+};
+
 export const Textarea = ({
-  name, value, handleInputChange, error,
+  name, value, handleInputChange, error, isRequired,
 }) => (
   <StyledInput error={error}>
-    <label htmlFor={name}>{name}</label>
+    <Label htmlFor={name}>{name} {isRequired && '*'}</Label>
     <textarea
       id={name}
       rows={4}
@@ -70,3 +80,14 @@ export const Textarea = ({
     />
   </StyledInput>
 );
+
+Textarea.defaultProps = {
+  error: false,
+};
+
+Textarea.propTypes = {
+  name: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  handleInputChange: PropTypes.func.isRequired,
+  error: PropTypes.bool,
+};

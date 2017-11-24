@@ -1,16 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-const StyledCheckbox = styled.div`
-font-size: 1.2rem;
-  label {
-    display: block;
-    text-transform: capitalize;
-    color: #4F4F4F;
-    font-weight: 700;
-    margin: 5px 0;
-  }
-`;
+import Label from '../styled/Label';
 
 const Boxes = styled.div`
   display: flex;
@@ -55,8 +47,8 @@ const Box = styled.div`
 const Checkbox = ({ tags, handleTagChange }) => {
   const possibleTags = ['vegan', 'healthy', 'gluten free', 'meat', 'quick&easy', 'spicy'];
   return (
-    <StyledCheckbox>
-      <label htmlFor="tags">Tags</label>
+    <div>
+      <Label>Tags</Label>
       <Boxes>
         {
           possibleTags.map((tag, i) => (
@@ -68,15 +60,18 @@ const Checkbox = ({ tags, handleTagChange }) => {
                 checked={tags.includes(tag)}
                 onChange={() => handleTagChange(tag)}
               />
-              <label htmlFor={tag}>
-                {tag}<span />
-              </label>
+              <label htmlFor={tag}>{tag}<span /></label>
             </Box>
           ))
         }
       </Boxes>
-    </StyledCheckbox>
+    </div>
   );
+};
+
+Checkbox.propTypes = {
+  tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+  handleTagChange: PropTypes.func.isRequired,
 };
 
 export default Checkbox;
