@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Select with no selected category correctly 1`] = `
+<styled.div
+  error={false}
+>
+  <styled.label
+    htmlFor="category"
+  >
+    Category *
+  </styled.label>
+  <select
+    id="category"
+    onChange={[Function]}
+    value="Choose"
+  >
+    <option
+      disabled={true}
+      hidden={true}
+    >
+      Choose
+    </option>
+    <option
+      value="breakfast"
+    >
+      Breakfast
+    </option>
+    <option
+      value="dinner"
+    >
+      Dinner
+    </option>
+    <option
+      value="dessert"
+    >
+      Dessert
+    </option>
+    <option
+      value="snacks"
+    >
+      Snack
+    </option>
+    <option
+      value="drinks"
+    >
+      Drink
+    </option>
+  </select>
+</styled.div>
+`;
+
+exports[`should render Select with selected category correctly 1`] = `
+<styled.div
+  error={false}
+>
+  <styled.label
+    htmlFor="category"
+  >
+    Category *
+  </styled.label>
+  <select
+    id="category"
+    onChange={[Function]}
+    value="breakfast"
+  >
+    <option
+      disabled={true}
+      hidden={true}
+    >
+      Choose
+    </option>
+    <option
+      value="breakfast"
+    >
+      Breakfast
+    </option>
+    <option
+      value="dinner"
+    >
+      Dinner
+    </option>
+    <option
+      value="dessert"
+    >
+      Dessert
+    </option>
+    <option
+      value="snacks"
+    >
+      Snack
+    </option>
+    <option
+      value="drinks"
+    >
+      Drink
+    </option>
+  </select>
+</styled.div>
+`;
