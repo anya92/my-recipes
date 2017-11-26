@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render AddRecipe correctly 1`] = `
+<div>
+  <Navbar />
+  <div
+    className="container"
+  >
+    <styled.h1>
+      Add new recipe
+    </styled.h1>
+    <RecipeForm
+      onCancel={[Function]}
+      onSubmit={[Function]}
+    />
+  </div>
+</div>
+`;

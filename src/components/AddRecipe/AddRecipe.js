@@ -12,7 +12,7 @@ const Title = styled.h1`
   margin-bottom: 10px;
 `;
 
-class AddRecipe extends Component {
+export class AddRecipe extends Component {
   onSubmit = (recipe) => {
     this.props.addNewRecipe(recipe);
     this.props.history.push(`/recipes/${recipe.slug}`);
@@ -28,11 +28,19 @@ class AddRecipe extends Component {
         <Navbar />
         <div className="container">
           <Title>Add new recipe</Title>
-          <RecipeForm onSubmit={this.onSubmit} onCancel={this.onCancel} />
+          <RecipeForm
+            recipes={this.props.recipes}
+            onSubmit={this.onSubmit}
+            onCancel={this.onCancel}
+          />
         </div>
       </div>
     );
   }
 }
 
-export default connect(null, { addNewRecipe })(AddRecipe);
+function mapStateToProps(state) {
+  return { recipes: state };
+}
+
+export default connect(mapStateToProps, { addNewRecipe })(AddRecipe);

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import uniqId from 'uniqid';
 import getSlug from '../../helpers/slug';
 
@@ -201,8 +200,4 @@ export class RecipeForm extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return { recipes: state };
-}
-
-export default connect(mapStateToProps)(RecipeForm);
+export default RecipeForm;
