@@ -13,7 +13,7 @@ const Title = styled.h1`
   text-align: center;
 `;
 
-class EditRecipe extends Component {
+export class EditRecipe extends Component {
   onSubmit = recipe => {
     this.props.editRecipe(recipe.id, recipe);
     this.props.history.push(`/recipes/${recipe.slug}`);
@@ -27,7 +27,12 @@ class EditRecipe extends Component {
         <Navbar />
         <div className="container">
           <Title>Edit "{this.props.recipe.name}"</Title>
-          <RecipeForm onSubmit={this.onSubmit} onCancel={this.onCancel} recipe={this.props.recipe} />
+          <RecipeForm
+            recipe={this.props.recipe}
+            recipes={this.props.recipes}
+            onSubmit={this.onSubmit}
+            onCancel={this.onCancel}
+          />
         </div>
       </div>
     );
@@ -37,7 +42,8 @@ class EditRecipe extends Component {
 function mapStateToProps(state, ownProps) {
   const recipe = state.filter(rec => rec.slug === ownProps.match.params.slug);
   return {
-    recipe: recipe[0]
+    recipe: recipe[0],
+    recipes: state,
   };
 }
 
