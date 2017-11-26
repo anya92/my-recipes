@@ -10,7 +10,7 @@ const StyledSelect = styled.div`
   justify-content: flex-end;
   align-items: center;
   max-width: 100%;
-  label {
+  ${Label} {
     margin: 0 10px;
   }
   select {

@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
+import Label from '../styled/Label';
+import Input from '../styled/Input';
+
 const Image = styled.div`
   height: 300px;
   background-color: #EEE;
@@ -22,12 +25,6 @@ const ChangeImageLink = styled.div`
 
 const StyledImageForm = styled.div`
   margin-bottom: 10px;
-  label {
-    display: block;
-    color: #4F4F4F;
-    font-weight: 700;
-    margin: 5px 0;
-  }
   div {
     display: flex;
     span {
@@ -38,17 +35,6 @@ const StyledImageForm = styled.div`
       padding: 0 10px;
       border-left: 2px solid #FFF;
       cursor: pointer;
-    }
-  }
-  input {
-    width: 100%;
-    border: none;
-    background-color: #F2F2F2;
-    padding: 8px 2px;
-    border-bottom: 2px solid #F2F2F2;
-    &:focus {
-      border-bottom-color: dodgerblue;
-      outline: none;
     }
   }
 `;
@@ -86,10 +72,18 @@ class ImageForm extends Component {
     }
     return (
       <StyledImageForm>
-        <Image>{this.state.image && <img src={this.state.image} alt="" /> }</Image>
-        <label htmlFor="image">Add photo</label>
+        <Image>
+          {this.state.image && <img src={this.state.image} alt="" />}
+        </Image>
+        <Label htmlFor="image">Add photo</Label>
         <div>
-          <input type="text" id="image" placeholder="https://" onChange={this.handleImageChange} value={this.state.image} />
+          <Input
+            type="text"
+            id="image"
+            placeholder="https://"
+            onChange={this.handleImageChange}
+            value={this.state.image}
+          />
           <span onClick={this.setImage}>Save</span>
         </div>
       </StyledImageForm>

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import Label from '../styled/Label';
+import Input from '../styled/Input';
 
 const Boxes = styled.div`
   display: flex;
@@ -15,33 +16,7 @@ const Box = styled.div`
   label {
     font-weight: 400;
     cursor: pointer;
-    max-width: 100%;
   }
-  input[type="checkbox"] {
-    display: none;
-    & + label span {
-      display: inline-block;
-      cursor: pointer;
-      width: 20px;
-      height: 20px;
-      margin: 1px 6px 0 10px;
-      float: left;
-      background-color: #C4C4C4;
-      border-radius: 4px;
-    }  
-    &:checked + label span {
-      position: relative;
-      background-color: dodgerblue;
-      &::after {
-        content: '✔';
-        color: #FFF;
-        font-size: 1rem;
-        position: absolute;
-        top: 2px;
-        left: 3px;
-      }  
-    }    
-  }      
 `;
 
 const Checkbox = ({ tags, handleTagChange }) => {
@@ -53,7 +28,7 @@ const Checkbox = ({ tags, handleTagChange }) => {
         {
           possibleTags.map((tag, i) => (
             <Box key={i}>
-              <input
+              <Input
                 type="checkbox"
                 name="tags"
                 id={tag}

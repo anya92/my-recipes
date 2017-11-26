@@ -3,8 +3,10 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import Label from '../styled/Label';
+import StyledInput from '../styled/Input';
+import StyledTextarea from '../styled/Textarea';
 
-const StyledInput = styled.div`
+const FormField = styled.div`
   div {
     display: flex;
     span {
@@ -16,46 +18,33 @@ const StyledInput = styled.div`
       border-left: 2px solid #333;
     }
   }
-  input, textarea {
-    width: 100%;
-    border: none;
-    background-color: #F2F2F2;
-    padding: 8px 2px;
-    border-bottom: 2px solid #F2F2F2;
-    &:focus {
-      ${props => !props.error && 'border-bottom-color: dodgerblue;'};
-      outline: none;
-    }
-    ${props => props.error && 'border: 2px solid crimson;'};
-  }
-  input {
-    height: 40px;
-    ${props => (props.additionalText && 'text-align: right; padding-right: 8px;')};
-  }
 `;
 
 export const Input = ({
   name, value, handleInputChange, additionalText, type = 'text', error = false, isRequired,
 }) => (
-  <StyledInput additionalText={additionalText} error={error}>
+  <FormField>
     <Label htmlFor={name}>{name} {isRequired && '*'}</Label>
     <div>
-      <input
+      <StyledInput
         type={type}
         min={type === 'number' ? 0 : ''}
         id={name}
         value={value}
         onChange={e => handleInputChange(e, name)}
+        error={error}
+        additionalText={additionalText}
       />
       {additionalText && <span>{additionalText}</span>}
     </div>
-  </StyledInput>
+  </FormField>
 );
 
 Input.defaultProps = {
   additionalText: '',
   type: 'text',
   error: false,
+  isRequired: false,
 };
 
 Input.propTypes = {
@@ -65,24 +54,27 @@ Input.propTypes = {
   additionalText: PropTypes.string,
   type: PropTypes.string,
   error: PropTypes.bool,
+  isRequired: PropTypes.bool,
 };
 
 export const Textarea = ({
   name, value, handleInputChange, error, isRequired,
 }) => (
-  <StyledInput error={error}>
+  <FormField>
     <Label htmlFor={name}>{name} {isRequired && '*'}</Label>
-    <textarea
+    <StyledTextarea
       id={name}
       rows={4}
       value={value}
       onChange={e => handleInputChange(e, name)}
+      error={error}
     />
-  </StyledInput>
+  </FormField>
 );
 
 Textarea.defaultProps = {
   error: false,
+  isRequired: false,
 };
 
 Textarea.propTypes = {
@@ -90,4 +82,5 @@ Textarea.propTypes = {
   value: PropTypes.string.isRequired,
   handleInputChange: PropTypes.func.isRequired,
   error: PropTypes.bool,
+  isRequired: PropTypes.bool,
 };

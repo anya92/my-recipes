@@ -3,25 +3,15 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import Label from '../styled/Label';
-
-const StyledIngredients = styled.div`
-`;
+import Input from '../styled/Input';
 
 const Ingredient = styled.div`
   display: flex;
   margin: 4px 0;
   height: 40px;
-  input {
-    border: none;
-    background-color: #F2F2F2;
-    padding: 8px 2px;
+  ${Input} {
     width: calc(100% / 2 - 20px);
     flex: 1 1;
-    border-bottom: 2px solid #F2F2F2;
-    &:focus {
-      border-bottom-color: dodgerblue;
-      outline: none;
-    }
     &:first-child {
       ${props => (props.i === 0 && props.error) && 'border: 2px solid crimson;'};
     }
@@ -61,17 +51,17 @@ const Add = styled.div`
 const Ingredients = ({
   ingredients, handleIngredientChange, addIngredientInput, removeIngredientInput, error,
 }) => (
-  <StyledIngredients>
+  <div>
     <Label>Ingredients *</Label>
     {
       ingredients.map((ing, i) => (
         <Ingredient key={i} error={error} i={i}>
-          <input
+          <Input
             placeholder="name"
             value={ingredients[i].name}
             onChange={e => handleIngredientChange(e, 'name', i)}
           />
-          <input
+          <Input
             placeholder="quantity"
             value={ingredients[i].quantity}
             onChange={e => handleIngredientChange(e, 'quantity', i)}
@@ -81,7 +71,7 @@ const Ingredients = ({
       ))
     }
     <Add onClick={addIngredientInput}>Add new ingredient</Add>
-  </StyledIngredients>
+  </div>
 );
 
 Ingredients.propTypes = {

@@ -104,7 +104,7 @@ const RecipeInfo = ({ recipe, deleteRecipe }) => {
         <h1>{recipe.name}</h1>
         <Options>
           <Link to={`/recipes/${recipe.slug}/edit`}><i className="fa fa-pencil" />Edit</Link>
-          <div onClick={() => deleteRecipe(recipe.id)}><i className="fa fa-times" />Delete</div>
+          <span onClick={() => deleteRecipe(recipe.id)}><i className="fa fa-times" />Delete</span>
         </Options>
       </Name>
       <AddedAt>added {moment(recipe.addedAt).from(moment())}</AddedAt>

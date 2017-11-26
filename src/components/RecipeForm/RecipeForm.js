@@ -1,33 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import styled from 'styled-components';
 import uniqId from 'uniqid';
-
-import { Input, Textarea } from './Inputs/Input';
-import Checkbox from './Inputs/Checkbox';
-import Select from './Inputs/Select';
-import Ingredients from './Inputs/Ingredients';
-import ImageForm from './Inputs/ImageForm';
-import Button from './styled/Button';
-
 import getSlug from '../../helpers/slug';
 
-const Form = styled.form`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 50px;
-  @media all and (max-width: 580px) {
-    grid-template-columns: 1fr;
-    grid-gap: 20px;
-  }
-  font-size: 1.2rem;
-`;
+import { Input, Textarea } from './FormFields/InputAndTextarea';
+import Checkbox from './FormFields/Checkbox';
+import Select from './FormFields/Select';
+import Ingredients from './FormFields/Ingredients';
+import ImageForm from './FormFields/ImageForm';
 
-const Row = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
-`;
+import { Form, Row } from './styled/Form';
+import Button from './styled/Button';
 
 export class RecipeForm extends Component {
   constructor(props) {
@@ -106,37 +89,38 @@ export class RecipeForm extends Component {
     }
   }
 
-  onSubmit = e => {
-    e.preventDefault();
-    // validate fields
-    function validateFields(field) {
-      if (field === 'ingredients') {
-        if (!this.state.ingredients.some(ingredient => ingredient.name !== '')) {
-          this.setState(prevState => ({ errors: { ...prevState.errors, ingredients: true } }));
-          return false;
-        } else {
-          this.setState(prevState => ({ errors: { ...prevState.errors, ingredients: false } }));
-          return true;
-        }
-      }
-      if (!this.state[field]) {
-        this.setState(prevState => ({ errors: { ...prevState.errors, [field]: true } }));
+  validateFields = (field) => {
+    if (field === 'ingredients') {
+      if (!this.state.ingredients.some(ingredient => ingredient.name !== '')) {
+        this.setState(prevState => ({ errors: { ...prevState.errors, ingredients: true } }));
         return false;
       } else {
-        this.setState(prevState => ({ errors: { ...prevState.errors, [field]: false } }));
+        this.setState(prevState => ({ errors: { ...prevState.errors, ingredients: false } }));
         return true;
       }
     }
-    // format (delete empty ingredients)
+    if (!this.state[field]) {
+      this.setState(prevState => ({ errors: { ...prevState.errors, [field]: true } }));
+      return false;
+    } else {
+      this.setState(prevState => ({ errors: { ...prevState.errors, [field]: false } }));
+      return true;
+    }
+  }
+
+  onSubmit = e => {
+    e.preventDefault();
+    // format (= delete empty ingredients)
     const ingredients = this.state.ingredients.filter(ingredient => (
       ingredient.name !== ''
     ));
-
+    // validate required fields
     const requiredFields = ['name', 'directions', 'ingredients', 'category', 'time', 'yields'];
 
-    if (!requiredFields.every(field => validateFields.call(this, field))) {
-      this.setState(() => ({ error: 'Please provide all requested information' }));
+    if (!requiredFields.every(field => this.validateFields(field))) {
+      this.setState(() => ({ error: 'Please provide all requested information (*)' }));
     } else {
+      // save a recipe
       this.setState(() => ({ error: '' }));
       const { name, directions, category, tags, time, yields, image } = this.state;
       const { recipe, recipes } = this.props;
