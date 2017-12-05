@@ -24,6 +24,7 @@ const Ingredient = styled.div`
     }
   }
 `;
+Ingredient.displayName = 'Ingredient';
 
 const Delete = styled.span`
   background-color: #F2F2F2;
@@ -37,6 +38,8 @@ const Delete = styled.span`
   cursor: pointer;
 `;
 
+Delete.displayName = 'DeleteIngredient';
+
 const Add = styled.div`
   width: 100%;
   height: 40px;
@@ -47,6 +50,8 @@ const Add = styled.div`
   justify-content: center;
   cursor: pointer;
 `;
+
+Add.displayName = 'AddIngredient';
 
 const Ingredients = ({
   ingredients, handleIngredientChange, addIngredientInput, removeIngredientInput, error,

@@ -9,7 +9,7 @@ exports[`should render Checkbox with no tags selected correctly 1`] = `
     <styled.div
       key="0"
     >
-      <styled.input
+      <Input
         checked={false}
         id="vegan"
         name="tags"
@@ -26,7 +26,7 @@ exports[`should render Checkbox with no tags selected correctly 1`] = `
     <styled.div
       key="1"
     >
-      <styled.input
+      <Input
         checked={false}
         id="healthy"
         name="tags"
@@ -43,7 +43,7 @@ exports[`should render Checkbox with no tags selected correctly 1`] = `
     <styled.div
       key="2"
     >
-      <styled.input
+      <Input
         checked={false}
         id="gluten free"
         name="tags"
@@ -60,7 +60,7 @@ exports[`should render Checkbox with no tags selected correctly 1`] = `
     <styled.div
       key="3"
     >
-      <styled.input
+      <Input
         checked={false}
         id="meat"
         name="tags"
@@ -77,7 +77,7 @@ exports[`should render Checkbox with no tags selected correctly 1`] = `
     <styled.div
       key="4"
     >
-      <styled.input
+      <Input
         checked={false}
         id="quick&easy"
         name="tags"
@@ -94,7 +94,7 @@ exports[`should render Checkbox with no tags selected correctly 1`] = `
     <styled.div
       key="5"
     >
-      <styled.input
+      <Input
         checked={false}
         id="spicy"
         name="tags"
@@ -121,7 +121,7 @@ exports[`should render Checkbox with selected tags correctly 1`] = `
     <styled.div
       key="0"
     >
-      <styled.input
+      <Input
         checked={false}
         id="vegan"
         name="tags"
@@ -138,7 +138,7 @@ exports[`should render Checkbox with selected tags correctly 1`] = `
     <styled.div
       key="1"
     >
-      <styled.input
+      <Input
         checked={true}
         id="healthy"
         name="tags"
@@ -155,7 +155,7 @@ exports[`should render Checkbox with selected tags correctly 1`] = `
     <styled.div
       key="2"
     >
-      <styled.input
+      <Input
         checked={false}
         id="gluten free"
         name="tags"
@@ -172,7 +172,7 @@ exports[`should render Checkbox with selected tags correctly 1`] = `
     <styled.div
       key="3"
     >
-      <styled.input
+      <Input
         checked={false}
         id="meat"
         name="tags"
@@ -189,7 +189,7 @@ exports[`should render Checkbox with selected tags correctly 1`] = `
     <styled.div
       key="4"
     >
-      <styled.input
+      <Input
         checked={true}
         id="quick&easy"
         name="tags"
@@ -206,7 +206,7 @@ exports[`should render Checkbox with selected tags correctly 1`] = `
     <styled.div
       key="5"
     >
-      <styled.input
+      <Input
         checked={false}
         id="spicy"
         name="tags"
