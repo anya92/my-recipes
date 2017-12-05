@@ -35,13 +35,6 @@ test('should render Select with selected category correctly', () => {
 
 test('should call handleInputChange on select change', () => {
   const value = 'breakfast';
-  wrapper.find('select').simulate('change', {
-    target: { value },
-  });
-  expect(handleInputChange).toHaveBeenLastCalledWith(
-    expect.objectContaining({
-      target: expect.any(String),
-    }),
-    'category',
-  );
+  wrapper.find('select').simulate('change', { target: { value } });
+  expect(handleInputChange).toHaveBeenLastCalledWith({ target: { value } }, 'category');
 });

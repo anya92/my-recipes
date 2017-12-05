@@ -1,0 +1,225 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Checkbox with no tags selected correctly 1`] = `
+<div>
+  <styled.label>
+    Tags
+  </styled.label>
+  <styled.div>
+    <styled.div
+      key="0"
+    >
+      <styled.input
+        checked={false}
+        id="vegan"
+        name="tags"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <label
+        htmlFor="vegan"
+      >
+        vegan
+        <span />
+      </label>
+    </styled.div>
+    <styled.div
+      key="1"
+    >
+      <styled.input
+        checked={false}
+        id="healthy"
+        name="tags"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <label
+        htmlFor="healthy"
+      >
+        healthy
+        <span />
+      </label>
+    </styled.div>
+    <styled.div
+      key="2"
+    >
+      <styled.input
+        checked={false}
+        id="gluten free"
+        name="tags"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <label
+        htmlFor="gluten free"
+      >
+        gluten free
+        <span />
+      </label>
+    </styled.div>
+    <styled.div
+      key="3"
+    >
+      <styled.input
+        checked={false}
+        id="meat"
+        name="tags"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <label
+        htmlFor="meat"
+      >
+        meat
+        <span />
+      </label>
+    </styled.div>
+    <styled.div
+      key="4"
+    >
+      <styled.input
+        checked={false}
+        id="quick&easy"
+        name="tags"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <label
+        htmlFor="quick&easy"
+      >
+        quick&easy
+        <span />
+      </label>
+    </styled.div>
+    <styled.div
+      key="5"
+    >
+      <styled.input
+        checked={false}
+        id="spicy"
+        name="tags"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <label
+        htmlFor="spicy"
+      >
+        spicy
+        <span />
+      </label>
+    </styled.div>
+  </styled.div>
+</div>
+`;
+
+exports[`should render Checkbox with selected tags correctly 1`] = `
+<div>
+  <styled.label>
+    Tags
+  </styled.label>
+  <styled.div>
+    <styled.div
+      key="0"
+    >
+      <styled.input
+        checked={false}
+        id="vegan"
+        name="tags"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <label
+        htmlFor="vegan"
+      >
+        vegan
+        <span />
+      </label>
+    </styled.div>
+    <styled.div
+      key="1"
+    >
+      <styled.input
+        checked={true}
+        id="healthy"
+        name="tags"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <label
+        htmlFor="healthy"
+      >
+        healthy
+        <span />
+      </label>
+    </styled.div>
+    <styled.div
+      key="2"
+    >
+      <styled.input
+        checked={false}
+        id="gluten free"
+        name="tags"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <label
+        htmlFor="gluten free"
+      >
+        gluten free
+        <span />
+      </label>
+    </styled.div>
+    <styled.div
+      key="3"
+    >
+      <styled.input
+        checked={false}
+        id="meat"
+        name="tags"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <label
+        htmlFor="meat"
+      >
+        meat
+        <span />
+      </label>
+    </styled.div>
+    <styled.div
+      key="4"
+    >
+      <styled.input
+        checked={true}
+        id="quick&easy"
+        name="tags"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <label
+        htmlFor="quick&easy"
+      >
+        quick&easy
+        <span />
+      </label>
+    </styled.div>
+    <styled.div
+      key="5"
+    >
+      <styled.input
+        checked={false}
+        id="spicy"
+        name="tags"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <label
+        htmlFor="spicy"
+      >
+        spicy
+        <span />
+      </label>
+    </styled.div>
+  </styled.div>
+</div>
+`;
