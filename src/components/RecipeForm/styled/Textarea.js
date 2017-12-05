@@ -13,4 +13,6 @@ const Textarea = styled.textarea`
   ${props => props.error && 'border: 2px solid crimson;'};
 `;
 
+Textarea.displayName = 'Textarea';
+
 export default Textarea;

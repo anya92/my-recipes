@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input should render Input correctly 1`] = `
+<styled.div>
+  <styled.label
+    htmlFor="name"
+  >
+    name
+     
+  </styled.label>
+  <div>
+    <Input
+      additionalText=""
+      error={false}
+      id="name"
+      min=""
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+  </div>
+</styled.div>
+`;
+
+exports[`Textarea should render Textarea correctly 1`] = `
+<styled.div>
+  <styled.label
+    htmlFor="directions"
+  >
+    directions
+     
+  </styled.label>
+  <Textarea
+    error={false}
+    id="directions"
+    onChange={[Function]}
+    rows={4}
+    value=""
+  />
+</styled.div>
+`;
