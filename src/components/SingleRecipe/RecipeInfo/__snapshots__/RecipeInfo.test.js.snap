@@ -16,11 +16,14 @@ exports[`should render RecipeInfo correctly 1`] = `
         />
         Edit
       </Link>
-       
-      <i
-        className="fa fa-times"
-      />
-      Delete
+      <span
+        onClick={[Function]}
+      >
+        <i
+          className="fa fa-times"
+        />
+        Delete
+      </span>
     </styled.div>
   </styled.div>
   <styled.h3>
@@ -82,13 +85,15 @@ exports[`should render RecipeInfo correctly 1`] = `
       <i
         className="fa fa-clock-o"
       />
-      9 minutes
+      9
+       minute/s
     </span>
     <span>
       <i
         className="fa fa-users"
       />
-      2 to 4 servings
+      2 to 4
+       serving/s
     </span>
   </styled.div>
 </styled.div>
