@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ImageForm with image correctly 1`] = `
+<div>
+  <styled.div>
+    <img
+      alt=""
+      src="assets/images/pancakes.jpg"
+    />
+  </styled.div>
+  <ChangeImage
+    onClick={[Function]}
+  >
+    Change photo
+  </ChangeImage>
+</div>
+`;
+
+exports[`should render ImageForm with no image correctly 1`] = `
+<styled.div>
+  <styled.div />
+  <styled.label
+    htmlFor="image"
+  >
+    Add photo
+  </styled.label>
+  <div>
+    <Input
+      id="image"
+      onChange={[Function]}
+      placeholder="https://"
+      type="text"
+      value=""
+    />
+    <span
+      onClick={[Function]}
+    >
+      Save
+    </span>
+  </div>
+</styled.div>
+`;

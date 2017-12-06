@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import Label from '../styled/Label';
 import Input from '../styled/Input';
@@ -23,6 +24,8 @@ const ChangeImageLink = styled.div`
   background-color: #FFF;  
 `;
 
+ChangeImageLink.displayName = 'ChangeImage';
+
 const StyledImageForm = styled.div`
   margin-bottom: 10px;
   div {
@@ -40,6 +43,11 @@ const StyledImageForm = styled.div`
 `;
 
 class ImageForm extends Component {
+  static propTypes = {
+    image: PropTypes.string.isRequired,
+    setImage: PropTypes.func.isRequired,
+  }
+
   constructor(props) {
     super(props);
     this.state = {
