@@ -11,6 +11,8 @@ export const Form = styled.form`
   font-size: 1.2rem;
 `;
 
+Form.displayName = 'Form';
+
 export const Row = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;

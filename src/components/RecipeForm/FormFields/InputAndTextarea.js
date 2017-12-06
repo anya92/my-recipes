@@ -40,6 +40,8 @@ export const Input = ({
   </FormField>
 );
 
+Input.displayName = 'Input';
+
 Input.defaultProps = {
   additionalText: '',
   type: 'text',
@@ -71,6 +73,8 @@ export const Textarea = ({
     />
   </FormField>
 );
+
+Textarea.displayName = 'Textarea';
 
 Textarea.defaultProps = {
   error: false,

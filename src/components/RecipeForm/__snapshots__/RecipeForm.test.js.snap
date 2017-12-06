@@ -1,0 +1,394 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render RecipeForm correctly 1`] = `
+<Form
+  onSubmit={[Function]}
+>
+  <div>
+    <Input
+      additionalText=""
+      error={false}
+      handleInputChange={[Function]}
+      isRequired={true}
+      name="name"
+      type="text"
+      value=""
+    />
+    <Textarea
+      error={false}
+      handleInputChange={[Function]}
+      isRequired={true}
+      name="directions"
+      value=""
+    />
+    <Ingredients
+      addIngredientInput={[Function]}
+      error={false}
+      handleIngredientChange={[Function]}
+      ingredients={
+        Array [
+          Object {
+            "name": "",
+            "quantity": "",
+          },
+          Object {
+            "name": "",
+            "quantity": "",
+          },
+          Object {
+            "name": "",
+            "quantity": "",
+          },
+        ]
+      }
+      removeIngredientInput={[Function]}
+    />
+    <Select
+      category=""
+      error={false}
+      handleInputChange={[Function]}
+    />
+    <styled.div>
+      <Input
+        additionalText="minute/s"
+        error={false}
+        handleInputChange={[Function]}
+        isRequired={true}
+        name="time"
+        type="number"
+        value=""
+      />
+      <Input
+        additionalText="serving/s"
+        error={false}
+        handleInputChange={[Function]}
+        isRequired={true}
+        name="yields"
+        type="text"
+        value=""
+      />
+    </styled.div>
+  </div>
+  <div>
+    <ImageForm
+      image=""
+      setImage={[Function]}
+    />
+    <Checkbox
+      handleTagChange={[Function]}
+      tags={Array []}
+    />
+     
+    <styled.div>
+      <Button
+        type="button"
+      >
+        Cancel
+      </Button>
+      <Button
+        blue={true}
+        type="submit"
+      >
+        Save
+      </Button>
+    </styled.div>
+  </div>
+</Form>
+`;
+
+exports[`should render RecipeForm with data 1`] = `
+<Form
+  onSubmit={[Function]}
+>
+  <div>
+    <Input
+      additionalText=""
+      error={false}
+      handleInputChange={[Function]}
+      isRequired={true}
+      name="name"
+      type="text"
+      value="Fried Eggs"
+    />
+    <Textarea
+      error={false}
+      handleInputChange={[Function]}
+      isRequired={true}
+      name="directions"
+      value="Heat butter in nonstick skillet. Break eggs and slip into pan, one at a time. Cook slowly until whites are completely set and yolks begin to thicken but are not hard, 5 to 6 minutes. Slide turner under each egg and carefully flip it over in pan. Cook second side to desired doneness. Sprinkle with salt and pepper. Serve immediately."
+    />
+    <Ingredients
+      addIngredientInput={[Function]}
+      error={false}
+      handleIngredientChange={[Function]}
+      ingredients={
+        Array [
+          Object {
+            "name": "eggs",
+            "quantity": "2-4",
+          },
+          Object {
+            "name": "butter",
+          },
+          Object {
+            "name": "salt",
+          },
+          Object {
+            "name": "pepper",
+          },
+        ]
+      }
+      removeIngredientInput={[Function]}
+    />
+    <Select
+      category="breakfast"
+      error={false}
+      handleInputChange={[Function]}
+    />
+    <styled.div>
+      <Input
+        additionalText="minute/s"
+        error={false}
+        handleInputChange={[Function]}
+        isRequired={true}
+        name="time"
+        type="number"
+        value="9"
+      />
+      <Input
+        additionalText="serving/s"
+        error={false}
+        handleInputChange={[Function]}
+        isRequired={true}
+        name="yields"
+        type="text"
+        value="2 to 4"
+      />
+    </styled.div>
+  </div>
+  <div>
+    <ImageForm
+      image="assets/images/fried-eggs.jpg"
+      setImage={[Function]}
+    />
+    <Checkbox
+      handleTagChange={[Function]}
+      tags={
+        Array [
+          "quick&easy",
+          "healthy",
+        ]
+      }
+    />
+     
+    <styled.div>
+      <Button
+        type="button"
+      >
+        Cancel
+      </Button>
+      <Button
+        blue={true}
+        type="submit"
+      >
+        Save
+      </Button>
+    </styled.div>
+  </div>
+</Form>
+`;
+
+exports[`should render error for invalid form submission 1`] = `
+<Form
+  onSubmit={[Function]}
+>
+  <div>
+    <Input
+      additionalText=""
+      error={false}
+      handleInputChange={[Function]}
+      isRequired={true}
+      name="name"
+      type="text"
+      value=""
+    />
+    <Textarea
+      error={false}
+      handleInputChange={[Function]}
+      isRequired={true}
+      name="directions"
+      value=""
+    />
+    <Ingredients
+      addIngredientInput={[Function]}
+      error={false}
+      handleIngredientChange={[Function]}
+      ingredients={
+        Array [
+          Object {
+            "name": "",
+            "quantity": "",
+          },
+          Object {
+            "name": "",
+            "quantity": "",
+          },
+          Object {
+            "name": "",
+            "quantity": "",
+          },
+        ]
+      }
+      removeIngredientInput={[Function]}
+    />
+    <Select
+      category=""
+      error={false}
+      handleInputChange={[Function]}
+    />
+    <styled.div>
+      <Input
+        additionalText="minute/s"
+        error={false}
+        handleInputChange={[Function]}
+        isRequired={true}
+        name="time"
+        type="number"
+        value=""
+      />
+      <Input
+        additionalText="serving/s"
+        error={false}
+        handleInputChange={[Function]}
+        isRequired={true}
+        name="yields"
+        type="text"
+        value=""
+      />
+    </styled.div>
+  </div>
+  <div>
+    <ImageForm
+      image=""
+      setImage={[Function]}
+    />
+    <Checkbox
+      handleTagChange={[Function]}
+      tags={Array []}
+    />
+     
+    <styled.div>
+      <Button
+        type="button"
+      >
+        Cancel
+      </Button>
+      <Button
+        blue={true}
+        type="submit"
+      >
+        Save
+      </Button>
+    </styled.div>
+  </div>
+</Form>
+`;
+
+exports[`should render error for invalid form submission 2`] = `
+<Form
+  onSubmit={[Function]}
+>
+  <div>
+    <Input
+      additionalText=""
+      error={true}
+      handleInputChange={[Function]}
+      isRequired={true}
+      name="name"
+      type="text"
+      value=""
+    />
+    <Textarea
+      error={false}
+      handleInputChange={[Function]}
+      isRequired={true}
+      name="directions"
+      value=""
+    />
+    <Ingredients
+      addIngredientInput={[Function]}
+      error={false}
+      handleIngredientChange={[Function]}
+      ingredients={
+        Array [
+          Object {
+            "name": "",
+            "quantity": "",
+          },
+          Object {
+            "name": "",
+            "quantity": "",
+          },
+          Object {
+            "name": "",
+            "quantity": "",
+          },
+        ]
+      }
+      removeIngredientInput={[Function]}
+    />
+    <Select
+      category=""
+      error={false}
+      handleInputChange={[Function]}
+    />
+    <styled.div>
+      <Input
+        additionalText="minute/s"
+        error={false}
+        handleInputChange={[Function]}
+        isRequired={true}
+        name="time"
+        type="number"
+        value=""
+      />
+      <Input
+        additionalText="serving/s"
+        error={false}
+        handleInputChange={[Function]}
+        isRequired={true}
+        name="yields"
+        type="text"
+        value=""
+      />
+    </styled.div>
+  </div>
+  <div>
+    <ImageForm
+      image=""
+      setImage={[Function]}
+    />
+    <Checkbox
+      handleTagChange={[Function]}
+      tags={Array []}
+    />
+    <p>
+      Please provide all requested information (*)
+    </p>
+     
+    <styled.div>
+      <Button
+        type="button"
+      >
+        Cancel
+      </Button>
+      <Button
+        blue={true}
+        type="submit"
+      >
+        Save
+      </Button>
+    </styled.div>
+  </div>
+</Form>
+`;
