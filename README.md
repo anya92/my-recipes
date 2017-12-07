@@ -2,7 +2,7 @@
 
 [Free Code Camp's Front End Project](https://www.freecodecamp.org/challenges/build-a-recipe-box)
 
-<!-- Live: https://anya92.github.io/my-recipes/ -->
+Live: https://anya92.github.io/my-recipes/
 
 ### User stories:
 1. I can create recipes that have names and ingredients. ✔
