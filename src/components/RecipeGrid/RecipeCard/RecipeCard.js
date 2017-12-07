@@ -22,6 +22,7 @@ const RecipeName = styled.div`
 `;
 
 const Image = styled.div`
+  background: #eee;
   height: 200px;
   img {
     width: 100%;
@@ -74,7 +75,7 @@ const RecipeCard = ({ recipe }) => (
   <StyledCard key={recipe.slug}>
     <Link to={`/recipes/${recipe.slug}`}>
       <Image>
-        <img src={recipe.image} alt={recipe.name} />
+        <img src={recipe.image} alt="" />
       </Image>
     </Link>
     <RecipeName>

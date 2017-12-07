@@ -30,6 +30,42 @@ const Brand = styled.h1`
   margin: 15px 0;
 `;
 
+
+const Toggle = styled.div`
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  top: 28px;
+  left: 20px;
+  cursor: pointer;
+  @media screen and (min-width: 800px) {
+    display: none;
+  }
+  &::after, &::before, span {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    position: absolute;
+    border-radius: 10px;
+  }
+  &::after {
+    top: 0;
+  }
+  &::before {
+    bottom: 0;
+  }
+  span {
+    top: 50%;
+    width: 70%;
+    transform: translateY(-50%);
+    transition: width .4s ease-out;
+  }
+  &.open span {
+    width: 100%;
+  }
+`;
+
 const Links = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -68,37 +104,6 @@ const AddNewLink = styled.div`
   }
 `;
 
-const Toggle = styled.div`
-  width: 30px;
-  height: 20px;
-  position: absolute;
-  top: 28px;
-  left: 20px;
-  cursor: pointer;
-  @media screen and (min-width: 800px) {
-    display: none;
-  }
-  &::after, &::before, span {
-    content: '';
-    width: 100%;
-    height: 3px;
-    background-color: #333;
-    position: absolute;
-    border-radius: 10px;
-  }
-  &::after {
-    top: 0;
-  }
-  &::before {
-    bottom: 0;
-  }
-  span {
-    top: 50%;
-    width: 70%;
-    transform: translateY(-50%);
-  }
-`;
-
 const Navbar = () => {
   const handleMenuClick = () => document.querySelectorAll('.toggle').forEach(el => el.classList.toggle('open'));
   const handleLinkClick = () => document.querySelectorAll('.toggle').forEach(el => el.classList.remove('open'));
@@ -107,7 +112,7 @@ const Navbar = () => {
       <Brand>
         <Link to="/"><span>my</span>Recipes</Link>
       </Brand>
-      <Toggle onClick={handleMenuClick}><span /></Toggle>
+      <Toggle className="toggle" onClick={handleMenuClick}><span /></Toggle>
       <Links className="toggle">
         <NavLink onClick={handleLinkClick} activeClassName="active" exact to="/recipes">
           All&nbsp;recipes

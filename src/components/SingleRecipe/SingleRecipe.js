@@ -29,6 +29,9 @@ const NotFound = styled.div`
 `;
 
 export class SingleRecipe extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
   confirmDelete = () => {
     return window.confirm(`Are you sure that you want to permanently delete "${this.props.recipe.name}"?`);
   }

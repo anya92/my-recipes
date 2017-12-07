@@ -22,7 +22,7 @@ const Container = styled.div`
 
 const App = () => (
   <Container>
-    <Router onUpdate={() => window.scrollTo(0, 0)}>
+    <Router>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/breakfast" render={props => <RecipeGrid {...props} category="breakfast" />} />

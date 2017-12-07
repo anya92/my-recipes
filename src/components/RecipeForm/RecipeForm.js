@@ -10,6 +10,7 @@ import ImageForm from './FormFields/ImageForm';
 
 import { Form, Row } from './styled/Form';
 import Button from './styled/Button';
+import Error from './styled/Error';
 
 export class RecipeForm extends Component {
   constructor(props) {
@@ -189,7 +190,7 @@ export class RecipeForm extends Component {
             tags={this.state.tags} 
             handleTagChange={this.onTagChange} 
           />
-          { this.state.error && <p>{this.state.error}</p> } {/* Error */}
+          { this.state.error && <Error>{this.state.error}</Error> }
           <Row>
             <Button type="button" onClick={this.props.onCancel}>Cancel</Button>
             <Button type="submit" blue>Save</Button>
