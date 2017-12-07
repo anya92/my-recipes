@@ -78,7 +78,6 @@ exports[`should render RecipeForm correctly 1`] = `
       handleTagChange={[Function]}
       tags={Array []}
     />
-     
     <styled.div>
       <Button
         type="button"
@@ -180,7 +179,6 @@ exports[`should render RecipeForm with data 1`] = `
         ]
       }
     />
-     
     <styled.div>
       <Button
         type="button"
@@ -276,7 +274,6 @@ exports[`should render error for invalid form submission 1`] = `
       handleTagChange={[Function]}
       tags={Array []}
     />
-     
     <styled.div>
       <Button
         type="button"
@@ -372,10 +369,9 @@ exports[`should render error for invalid form submission 2`] = `
       handleTagChange={[Function]}
       tags={Array []}
     />
-    <p>
+    <styled.div>
       Please provide all requested information (*)
-    </p>
-     
+    </styled.div>
     <styled.div>
       <Button
         type="button"

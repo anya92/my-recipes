@@ -14,6 +14,7 @@ exports[`should render Navbar correctly 1`] = `
     </Link>
   </styled.h1>
   <styled.div
+    className="toggle"
     onClick={[Function]}
   >
     <span />

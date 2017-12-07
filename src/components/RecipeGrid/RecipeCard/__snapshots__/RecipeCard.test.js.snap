@@ -10,7 +10,7 @@ exports[`should render RecipeCard correctly 1`] = `
   >
     <styled.div>
       <img
-        alt="Fried Eggs"
+        alt=""
         src="assets/images/fried-eggs.jpg"
       />
     </styled.div>
