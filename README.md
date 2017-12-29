@@ -40,5 +40,4 @@ yarn test
 - Styled Components 
 - Jest and Enzyme - for testing
 
-<hr />
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
